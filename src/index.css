@@ -1,68 +1,166 @@
+/* --- 1. Definición de Colores y Fuentes (Paleta "Tierra y Grana") --- */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Fuentes */
+  --font-serif: 'Alegreya', serif; /* Para títulos */
+  --font-sans: 'Lato', sans-serif;   /* Para texto */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Colores */
+  --color-fondo: #f5f5f4;     /* Color "Hueso" (Stone 100) */
+  --color-texto: #292524;     /* Color "Tinta" (Stone 800) */
+  --color-grana: #b91c1c;     /* Color "Cochinilla" (Red 700) */
+  --color-maiz: #fde68a;      /* Color "Maíz" (Amber 200) */
+  --color-maiz-texto: #78350f; /* (Amber 800) */
+  --color-borde: #e7e5e4;    /* (Stone 200) */
+  --color-blanco: #ffffff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+/* --- 2. Reseteo Básico y Estilos Globales --- */
 body {
   margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+/* --- 3. Estilos de la App (Basados en App.jsx) --- */
+
+.contenedor-principal {
+  max-width: 42rem; /* 672px (max-w-2xl) */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.header {
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.titulo-principal {
+  font-family: var(--font-serif);
+  font-size: 3rem; /* 48px (text-5xl) */
+  font-weight: 700;
+  color: var(--color-grana);
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 1.25rem; /* 20px (text-xl) */
+  color: #57534e; /* Stone 600 */
+}
+
+.barra-busqueda {
+  width: 100%;
+  font-size: 1.125rem; /* text-lg */
+  padding: 1rem;
+  border: 2px solid #d6d3d1; /* Stone 300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+  box-sizing: border-box; /* Para que el padding no afecte el width */
+  margin-bottom: 2rem;
+}
+.barra-busqueda:focus {
+  outline: none;
+  border-color: var(--color-grana);
+  box-shadow: 0 0 0 2px var(--color-grana);
+}
+
+/* Contenedor de las tarjetas */
+.tarjetas-contenedor {
+  display: grid;
+  gap: 1rem; /* space-y-4 */
+}
+
+/* La tarjeta individual */
+.tarjeta-palabra {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  padding: 1.25rem; /* p-5 */
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+}
+
+.tarjeta-header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap; /* Para celulares */
+  gap: 0.5rem;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.palabra-nahuatl {
+  font-family: var(--font-serif);
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700;
+  color: var(--color-texto);
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.palabra-espanol {
+  font-size: 1.25rem; /* text-xl */
+  color: #57534e; /* Stone 600 */
+  margin-bottom: 0.75rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.reproductor-audio {
+  height: 32px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.etiqueta-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem; /* gap-2 */
+  margin-top: 0.75rem; /* mt-3 */
+}
+
+.etiqueta {
+  background-color: var(--color-maiz);
+  color: var(--color-maiz-texto);
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 700; /* font-bold */
+  padding: 0.25rem 0.75rem; /* px-3 py-1 */
+  border-radius: 9999px; /* rounded-full */
+  text-transform: capitalize;
+}
+
+.ejemplo-contenedor {
+  border-top: 1px solid var(--color-borde);
+  padding-top: 0.75rem; /* pt-3 */
+  margin-top: 1rem; /* mt-4 */
+}
+
+.ejemplo-texto {
+  font-style: italic;
+  color: #78716c; /* Stone 500 */
+  margin: 0 0 0.5rem 0;
+}
+
+.spinner-carga {
+  height: 4rem; /* w-16 */
+  width: 4rem; /* h-16 */
+  border-width: 8px;
+  border-style: dashed;
+  border-color: var(--color-grana);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 4rem auto;
+}
+
+.mensaje-no-resultados {
+  text-align: center;
+  color: #78716c; /* Stone 500 */
+  font-size: 1.125rem; /* text-lg */
+  padding: 2.5rem 0; /* py-10 */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  to {
+    transform: rotate(360deg);
   }
 }
