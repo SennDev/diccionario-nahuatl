@@ -164,3 +164,83 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+/* --- INICIO DE MODO OSCURO --- */
+/* Esto se aplica cuando la etiqueta <html> tiene la clase ".dark" 
+*/
+.dark:root {
+  --color-fondo: #1c1917;     /* Fondo "Piedra" Oscuro (Stone 900) */
+  --color-texto: #e7e5e4;     /* Texto "Hueso" Claro (Stone 200) */
+  --color-grana: #ef4444;     /* Rojo "Grana" más brillante (Red 500) */
+  --color-maiz: #a16207;      /* Maíz oscuro (Amber 700) */
+  --color-maiz-texto: #fef3c7; /* Texto Maíz claro (Amber 100) */
+  --color-borde: #44403c;     /* Borde (Stone 700) */
+  --color-blanco: #292524;    /* Fondo de Tarjeta (Stone 800) */
+}
+
+/* Hacemos la barra de búsqueda amigable con el modo oscuro */
+.dark .barra-busqueda {
+  background-color: #44403c; /* Stone 700 */
+  border-color: #57534e; /* Stone 600 */
+  color: var(--color-texto);
+}
+
+.dark .barra-busqueda:focus {
+  background-color: var(--color-blanco);
+}
+
+/* Hacemos el Navbar amigable */
+.dark .navbar {
+  background-color: var(--color-blanco);
+  border-bottom-color: var(--color-grana);
+}
+/* --- FIN DE MODO OSCURO --- */
+
+
+/* --- INICIO DE ANIMACIONES Y ESTILOS DE BOTÓN --- */
+/* Transición suave para todos los enlaces del nav */
+.nav-link {
+  transition: all 0.2s ease-out;
+}
+.nav-link:hover {
+  color: var(--color-grana);
+  transform: translateY(-2px); /* Animación sutil de "levantar" */
+}
+
+/* Animación de "fade-in" para las tarjetas */
+.tarjeta-palabra, .tarjeta-inicio {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de Botón Principal (Call to Action) */
+.btn-principal {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: var(--color-grana);
+  color: var(--color-blanco);
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease-out;
+}
+.btn-principal:hover {
+  background-color: #991b1b; /* Rojo más oscuro (Red 800) */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}

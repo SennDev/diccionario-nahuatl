@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'; // Importamos sus estilos
+import ThemeToggle from './ThemeToggle'; // <-- 1. IMPORTAR EL BOTÓN
+import './Navbar.css';
 
 function Navbar() {
   return (
@@ -9,10 +10,11 @@ function Navbar() {
         Nahuatl Vivo
       </Link>
       <div className="nav-links">
-        {/* Usamos 'Link' de react-router-dom en lugar de 'a' */}
         <Link to="/" className="nav-link">Inicio</Link>
         <Link to="/diccionario" className="nav-link">Diccionario</Link>
         <Link to="/cursos" className="nav-link">Cursos</Link>
+        <Link to="/historia" className="nav-link">Historia</Link>
+        <ThemeToggle /> {/* <-- 2. AÑADIR EL BOTÓN */}
       </div>
     </nav>
   );

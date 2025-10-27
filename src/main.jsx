@@ -1,17 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom' 
+import { HashRouter } from 'react-router-dom'
+import App from './App'
 import './index.css'
+import { ThemeProvider } from './context/ThemeContext' // <-- 1. IMPORTAR
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* 2. Envolver <App /> con el <BrowserRouter> */}
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    {/* 2. Envolver todo con el ThemeProvider */}
+    <ThemeProvider>
+      <HashRouter>
+        <App />
+      </HashRouter>
+    </ThemeProvider>
   </React.StrictMode>,
 )

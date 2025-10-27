@@ -1,11 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
   return (
-    // Reutilizamos la clase CSS del contenedor principal
     <div className="contenedor-principal" style={{ textAlign: 'center', paddingTop: '4rem' }}>
       
-      {/* Reutilizamos las clases de título */}
       <h1 className="titulo-principal" style={{ fontSize: '3.5rem' }}>
         ¡Ximopanolti!
       </h1>
@@ -13,19 +12,30 @@ function HomePage() {
         (Bienvenido)
       </p>
 
-      <p style={{ 
-        fontSize: '1.25rem', 
-        lineHeight: '1.7', 
+      {/* Usamos una tarjeta con la animación de fade-in */}
+      <div className="tarjeta-inicio" style={{ 
+        backgroundColor: 'var(--color-blanco)', 
+        padding: '2rem', 
+        borderRadius: '0.5rem', 
         marginTop: '3rem', 
-        maxWidth: '600px', 
-        margin: '3rem auto 0 auto' 
+        border: '1px solid var(--color-borde)',
+        boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
       }}>
-        Esta es la plataforma de <strong style={{ color: 'var(--color-grana)' }}>Nahuatl Vivo</strong>, un proyecto para la preservación y enseñanza del Náhuatl de la Huasteca.
-      </p>
-      
-      <p style={{ marginTop: '2rem', fontSize: '1.1rem' }}>
-        Usa el menú de navegación para explorar el diccionario o ver los cursos.
-      </p>
+        <p style={{ fontSize: '1.25rem', lineHeight: '1.7' }}>
+          Esta es la plataforma de <strong style={{ color: 'var(--color-grana)' }}>Nahuatl Vivo</strong>,
+          un proyecto para la preservación y enseñanza del Náhuatl de la Huasteca.
+        </p>
+        
+        {/* Botones de Call to Action */}
+        <div>
+          <Link to="/diccionario" className="btn-principal">
+            Explorar Diccionario
+          </Link>
+          <Link to="/cursos" className="btn-principal" style={{backgroundColor: '#57534e'}}>
+            Iniciar Cursos
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

@@ -3,7 +3,8 @@ import Layout from './components/Layout'
 import HomePage from './pages/HomePage'
 import DiccionarioPage from './pages/DiccionarioPage'
 import CursosPage from './pages/CursosPage'
-import NotFoundPage from './pages/NotFoundPage' // <-- 1. IMPORTAR
+import HistoriaPage from './pages/HistoriaPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
   return (
@@ -12,12 +13,10 @@ function App() {
         <Route index element={<HomePage />} />
         <Route path="diccionario" element={<DiccionarioPage />} />
         <Route path="cursos" element={<CursosPage />} />
-        
-        {/* 2. AÑADIR LA RUTA "COMODÍN" AL FINAL */}
+        <Route path="historia" element={<HistoriaPage />} /> {/* <-- 2. AÑADIR RUTA */}
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   )
 }
-
 export default App
