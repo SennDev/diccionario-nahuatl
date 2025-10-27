@@ -6,10 +6,9 @@
     <title>Diccionario Vivo - Huasteca</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Estilo simple para el spinner de carga */
         #loading-spinner {
-            border: 5px solid #f3f3f3; /* Gris claro */
-            border-top: 5px solid #3b82f6; /* Azul */
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3b82f6;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -19,6 +18,24 @@
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
+        }
+
+        /* --- 1. NUEVA SECCIÓN DE CSS PARA LAS ETIQUETAS --- */
+        .tag-container {
+            margin-top: 12px;
+            margin-bottom: 4px;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #e0e7ff; /* Azul muy claro */
+            color: #3730a3; /* Azul oscuro */
+            padding: 4px 12px;
+            border-radius: 9999px; /* Píldora */
+            font-size: 0.8rem; /* 13px */
+            font-weight: 600;
+            margin-right: 6px;
+            margin-bottom: 6px;
+            text-transform: capitalize; /* Pone la primera letra en mayúscula */
         }
     </style>
 </head>
@@ -37,7 +54,7 @@
             <input 
                 type="text" 
                 id="search-bar"
-                placeholder="Buscar en náhuatl o español..."
+                placeholder="Buscar palabra, traducción o categoría..."
                 class="w-full p-4 border-2 border-gray-300 rounded-lg shadow-sm text-lg
                        focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
@@ -45,10 +62,8 @@
 
         <main id="results-area">
             <div id="loading-spinner"></div>
-            
             <div id="results-container" class="space-y-4">
                 </div>
-            
             <div id="no-results" class="text-center text-gray-500 text-lg mt-8 hidden">
                 <p>No se encontraron resultados para tu búsqueda.</p>
             </div>
@@ -58,87 +73,57 @@
 
     <script>
         // --- CONFIGURACIÓN ---
-        const API_URL = 'https://script.google.com/macros/s/AKfycbzo7b4Xt6Un50uv7lRR_r2ldqUiDwKlOCYroXnta8p5n6NEQZ6Q-zmDJ8dajVcBbVQwGA/exec';
+        const API_URL = 'https://script.google.com/macros/s/AKfycbzo7b4Xt6Un50uv7lRR_r2ldqUiDwKlOCYroXnta8p5n6NEQZ6Q-zmDJ8dajVcBbVQwGA/exec'; // ¡Asegúrate de que esta sea tu URL de API correcta!
         
-        // --- ESTADO GLOBAL DE LA APP ---
-        let allWords = []; // Aquí guardaremos todas las palabras de la API
-
-        // --- REFERENCIAS A ELEMENTOS DEL DOM ---
+        let allWords = []; 
         const searchBar = document.getElementById('search-bar');
         const resultsContainer = document.getElementById('results-container');
         const loadingSpinner = document.getElementById('loading-spinner');
         const noResultsMessage = document.getElementById('no-results');
 
         // --- LÓGICA PRINCIPAL ---
-
-        // 1. Se ejecuta tan pronto como la página termina de cargar
         document.addEventListener('DOMContentLoaded', () => {
-            // Muestra el spinner mientras se cargan los datos
             loadingSpinner.style.display = 'block';
             resultsContainer.style.display = 'none';
             noResultsMessage.style.display = 'none';
-            
-            // Llama a la función para cargar las palabras
             fetchWords();
         });
 
-        // 2. Función para obtener los datos de tu Google Sheet API
         async function fetchWords() {
             try {
+                // ... (el código de fetch sigue igual) ...
                 const response = await fetch(API_URL);
-                if (!response.ok) {
-                    throw new Error(`Error de Red: ${response.statusText}`);
-                }
+                if (!response.ok) throw new Error(`Error de Red: ${response.statusText}`);
                 const data = await response.json();
-                
-                // Verifica si la API devolvió un error (de nuestro Apps Script)
-                if (data.status === 'error') {
-                   throw new Error(`Error de API: ${data.error}`);
-                }
+                if (data.status === 'error') throw new Error(`Error de API: ${data.error}`);
 
-                // Guarda los datos en nuestro estado global
                 allWords = data;
-                
-                // Oculta el spinner
                 loadingSpinner.style.display = 'none';
-                
-                // Muestra el contenedor de resultados y dibuja todas las palabras
                 resultsContainer.style.display = 'block';
                 renderWords(allWords);
 
             } catch (error) {
-                // Si algo sale mal, muestra un mensaje de error en lugar del spinner
                 loadingSpinner.innerHTML = `
                     <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                         <strong class="font-bold">¡Error!</strong>
                         <span class="block sm:inline">No se pudieron cargar los datos.</span>
                         <p class="text-sm mt-2">Detalle: ${error.message}</p>
-                        <p class="text-sm mt-1">Asegúrate de haber pegado bien la URL de la API y haberla implementado como "Cualquier usuario".</p>
                     </div>
                 `;
             }
         }
 
-        // 3. Función para "dibujar" las tarjetas de palabras en la pantalla
         function renderWords(wordsToRender) {
-            // Limpia los resultados anteriores
             resultsContainer.innerHTML = ''; 
+            noResultsMessage.style.display = wordsToRender.length === 0 ? 'block' : 'none';
 
-            // Revisa si la lista de palabras está vacía
-            if (wordsToRender.length === 0) {
-                noResultsMessage.style.display = 'block'; // Muestra "No hay resultados"
-            } else {
-                noResultsMessage.style.display = 'none'; // Oculta "No hay resultados"
-            }
-
-            // Crea una tarjeta HTML por cada palabra en la lista
             wordsToRender.forEach(word => {
                 const card = document.createElement('div');
                 card.className = 'bg-white p-5 rounded-lg shadow-md border border-gray-200 transition-all hover:shadow-lg';
-
-                // --- Construcción del HTML interno de la tarjeta ---
                 
-                // 1. Encabezado (Palabra y Audio Principal)
+                // --- 3. MODIFICACIÓN EN renderWords ---
+                //    (La construcción de cardContent ahora incluye createTagBadges)
+                
                 let cardContent = `
                     <div class="flex justify-between items-center mb-2">
                         <h2 class="text-2xl font-bold text-blue-700">${word.palabranahuatl}</h2>
@@ -146,10 +131,12 @@
                     </div>
                 `;
                 
-                // 2. Traducción
                 cardContent += `<p class="text-xl text-gray-700 mb-4">${word.traduccionespanol}</p>`;
+                
+                // ¡AQUÍ ESTÁ LA MAGIA!
+                // Llamamos a la nueva función para crear las etiquetas
+                cardContent += createTagBadges(word.categoria);
 
-                // 3. Ejemplo (Solo si existe en el Google Sheet)
                 if (word.ejemplonahuatl) {
                     cardContent += `
                         <div class="border-t border-gray-200 pt-3 mt-3">
@@ -158,21 +145,39 @@
                         </div>
                     `;
                 }
-                // --- Fin de la construcción ---
                 
                 card.innerHTML = cardContent;
                 resultsContainer.appendChild(card);
             });
         }
 
-        // 4. Función Auxiliar: Crea un <audio> player SOLO si la URL no está vacía
-        function createAudioPlayer(url) {
-            // Si la celda de 'audiourl' o 'audioejemplourl' está vacía, no devuelve nada.
-            if (!url) {
-                return ''; 
+        // --- 2. NUEVA FUNCIÓN "HELPER" PARA CREAR ETIQUETAS ---
+        /**
+         * Crea píldoras HTML (tags) a partir de un string de categorías
+         * separado por comas (ej: "sustantivo, animal")
+         */
+        function createTagBadges(categoriaStr) {
+            // Si la celda de 'categoria' está vacía, no devuelve nada
+            if (!categoriaStr) {
+                return '';
             }
+
+            // Divide el string por comas y quita espacios
+            const tags = categoriaStr.split(',').map(tag => tag.trim());
             
-            // Si hay una URL, crea el reproductor
+            let html = '<div class="tag-container">';
+            tags.forEach(tag => {
+                // Solo muestra la etiqueta si no está vacía
+                if(tag) {
+                    html += `<span class="tag">${tag}</span>`;
+                }
+            });
+            html += '</div>';
+            return html;
+        }
+
+        function createAudioPlayer(url) {
+            if (!url) return ''; 
             return `
                 <audio controls class="h-8" style="height: 32px;">
                     <source src="${url}" type="audio/mpeg">
@@ -181,18 +186,21 @@
             `;
         }
 
-        // 5. Evento de Búsqueda: Se activa cada vez que escribes en la barra
+        // 4. MODIFICACIÓN EN LA BÚSQUEDA
+        //    (Ahora también busca en las categorías)
         searchBar.addEventListener('keyup', () => {
             const query = searchBar.value.toLowerCase().trim();
             
-            // Filtra la lista 'allWords'
             const filteredWords = allWords.filter(word => {
                 const nahuatlMatch = word.palabranahuatl.toLowerCase().includes(query);
                 const espanolMatch = word.traduccionespanol.toLowerCase().includes(query);
-                return nahuatlMatch || espanolMatch;
+                
+                // ¡NUEVO! Revisa si la categoría también coincide
+                const categoriaMatch = word.categoria ? word.categoria.toLowerCase().includes(query) : false;
+                
+                return nahuatlMatch || espanolMatch || categoriaMatch;
             });
 
-            // Vuelve a "dibujar" las tarjetas solo con las palabras filtradas
             renderWords(filteredWords);
         });
 
