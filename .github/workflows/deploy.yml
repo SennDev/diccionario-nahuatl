@@ -1,0 +1,69 @@
+# Workflow para construir y desplegar un sitio de Vite en GitHub Pages
+name: Deploy Vite site to Pages
+
+on:
+  # Se ejecuta en cada 'push' a la rama 'main'
+  push:
+    branches: [main]
+
+  # Te permite ejecutarlo manualmente desde la pestaña Actions
+  workflow_dispatch:
+
+# Otorga los permisos necesarios al GITHUB_TOKEN para el despliegue
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Permite solo un despliegue a la vez
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  # Trabajo de "Construcción" (Build)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout (Traer el código)
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Usa una versión moderna de Node.js
+          cache: npm
+      - name: Install dependencies (Instalar dependencias)
+        run: npm install
+      - name: Build (Construir la app)
+        # 'npm run build' ejecuta 'vite build' gracias a tu package.json
+        run: npm run build
+      - name: Setup Pages (Configurar Páginas)
+        uses: actions/configure-pages@v4
+      - name: Upload artifact (Subir el resultado)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Vite construye la app en la carpeta 'dist' por defecto
+          path: ./dist
+
+  # Trabajo de "Despliegue" (Deploy)
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build # Este trabajo necesita que el trabajo 'build' termine
+    steps:
+      - name: Deploy to GitHub Pages (Desplegar en GitHub Pages)
+        id: deployment
+        uses: actions/deploy-pages@v4
+```eof
+
+5.  **Sube el archivo desde tu terminal:**
+    * Abre tu terminal (asegúrate de estar en la carpeta `diccionario-nahuatl`).
+    * Ejecuta los siguientes comandos de Git:
+
+    ```bash
+    git add .github/workflows/deploy.yml
+    git commit -m "Add GitHub Actions workflow for Vite deployment"
+    git push
+    ```
