@@ -1,69 +1,95 @@
-# Workflow para construir y desplegar un sitio de Vite en GitHub Pages
+# Nombre del Workflow
 name: Deploy Vite site to Pages
 
+# Cuándo se va a ejecutar
 on:
-  # Se ejecuta en cada 'push' a la rama 'main'
   push:
-    branches: [main]
+    branches: [main] # Cada vez que subas cambios a la rama 'main'
+  workflow_dispatch: # Te permite ejecutarlo manualmente
 
-  # Te permite ejecutarlo manualmente desde la pestaña Actions
-  workflow_dispatch:
-
-# Otorga los permisos necesarios al GITHUB_TOKEN para el despliegue
+# Permisos que necesita el workflow
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Permite solo un despliegue a la vez
+# Configuración de concurrencia (para evitar despliegues dobles)
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: "pages" # Agrupado como 'pages'
+  cancel-in-progress: false # No cancelar despliegues en progreso
 
+# Los trabajos (jobs) que va a hacer
 jobs:
-  # Trabajo de "Construcción" (Build)
+  # 1. El trabajo de "Construir" (Build)
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout (Traer el código)
+      # 1.1. Clona tu repositorio
+      - name: Checkout
         uses: actions/checkout@v4
+      
+      # 1.2. Configura Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Usa una versión moderna de Node.js
-          cache: npm
-      - name: Install dependencies (Instalar dependencias)
+          node-version: 20
+          cache: 'npm'
+          
+      # 1.3. Instala las dependencias
+      - name: Install dependencies
         run: npm install
-      - name: Build (Construir la app)
-        # 'npm run build' ejecuta 'vite build' gracias a tu package.json
-        run: npm run build
-      - name: Setup Pages (Configurar Páginas)
-        uses: actions/configure-pages@v4
-      - name: Upload artifact (Subir el resultado)
+        
+      # 1.4. Construye la app (crea la carpeta 'dist')
+      - name: Build
+        run: npm run build # Esto ejecuta 'vite build'
+        
+      # 1.5. Sube el resultado (la carpeta 'dist') como un artefacto
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Vite construye la app en la carpeta 'dist' por defecto
           path: ./dist
 
-  # Trabajo de "Despliegue" (Deploy)
+  # 2. El trabajo de "Desplegar" (Deploy)
   deploy:
+    # Necesita que el trabajo 'build' termine primero
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build # Este trabajo necesita que el trabajo 'build' termine
     steps:
-      - name: Deploy to GitHub Pages (Desplegar en GitHub Pages)
+      # 2.1. Despliega el artefacto (la carpeta 'dist') en GitHub Pages
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 ```eof
 
-5.  **Sube el archivo desde tu terminal:**
-    * Abre tu terminal (asegúrate de estar en la carpeta `diccionario-nahuatl`).
-    * Ejecuta los siguientes comandos de Git:
+5.  **Guarda** el archivo.
 
-    ```bash
-    git add .github/workflows/deploy.yml
-    git commit -m "Add GitHub Actions workflow for Vite deployment"
-    git push
-    ```
+---
+
+### Paso 3: Sube el Arreglo (Usando GitHub Desktop)
+
+Ahora, vuelve a la aplicación de **GitHub Desktop**.
+
+1.  Verás que en la pestaña **"Changes"** (Cambios) aparece tu archivo `deploy.yml` con las modificaciones.
+2.  En la parte inferior izquierda, escribe un resumen del cambio. Por ejemplo: **`Fix: Corregir workflow de despliegue`**
+3.  Haz clic en el botón azul que dice **"Commit to main"**.
+4.  Después de "commitear", un nuevo botón aparecerá en la parte superior central. Haz clic en **"Push origin"**.
+
+
+---
+
+### Paso 4: Verifica si Funcionó
+
+¡Eso es todo lo que haces en tu computadora!
+
+1.  Ahora ve al sitio web de GitHub, a tu repositorio.
+2.  Ve a la pestaña **"Actions"**.
+3.  Verás un nuevo workflow corriendo (con tu mensaje: "Fix: Corregir workflow de despliegue").
+4.  Esta vez, deberá procesar todo y terminar con una **palomita verde (✅)**.
+5.  Una vez que esté en verde, ve a tu URL (`https://senndev.github.io/diccionario-nahuatl/`) y recarga con **`Ctrl + Shift + R`**.
+
+Verás tu app de React.
+
+**Resumen:** Usaste **VS Code** para *editar* el archivo y **GitHub Desktop** para *subir* el archivo corregido. Mucho más simple.
