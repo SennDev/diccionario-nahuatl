@@ -1,0 +1,64 @@
+# Nombre del Workflow
+name: Deploy Vite site to Pages
+
+# Cuándo se va a ejecutar
+on:
+  push:
+    branches: [main] # Cada vez que subas cambios a la rama 'main'
+  workflow_dispatch: # Te permite ejecutarlo manualmente
+
+# Permisos que necesita el workflow
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Configuración de concurrencia (para evitar despliegues dobles)
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Los trabajos (jobs) que va a hacer
+jobs:
+  # 1. El trabajo de "Construir" (Build)
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1.1. Clona tu repositorio
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # 1.2. Configura Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          
+      # 1.3. Instala las dependencias
+      - name: Install dependencies
+        run: npm install
+        
+      # 1.4. Construye la app (crea la carpeta 'dist')
+      - name: Build
+        run: npm run build # Esto ejecuta 'vite build'
+        
+      # 1.5. Sube el resultado (la carpeta 'dist') como un artefacto
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  # 2. El trabajo de "Desplegar" (Deploy)
+  deploy:
+    # Necesita que el trabajo 'build' termine primero
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      # 2.1. Despliega el artefacto (la carpeta 'dist') en GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
