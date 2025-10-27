@@ -14,7 +14,8 @@ function Navbar() {
         <Link to="/diccionario" className="nav-link">Diccionario</Link>
         <Link to="/cursos" className="nav-link">Cursos</Link>
         <Link to="/historia" className="nav-link">Historia</Link>
-        <ThemeToggle /> {/* <-- 2. AÑADIR EL BOTÓN */}
+        <Link to="/analizador" className="nav-link">Analizador</Link> {/* <-- AÑADIR ENLACE */}
+        <ThemeToggle />
       </div>
     </nav>
   );

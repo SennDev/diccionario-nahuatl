@@ -22,10 +22,9 @@ body {
   color: var(--color-texto);
 }
 
-/* --- 3. Estilos de la App (Basados en App.jsx) --- */
-
+/* --- 3. Estilos de Layout --- */
 .contenedor-principal {
-  max-width: 42rem; /* 672px (max-w-2xl) */
+  max-width: 800px; /* Incrementado un poco para el grid */
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
@@ -39,26 +38,28 @@ body {
 
 .titulo-principal {
   font-family: var(--font-serif);
-  font-size: 3rem; /* 48px (text-5xl) */
+  font-size: 3rem; 
   font-weight: 700;
   color: var(--color-grana);
   margin-bottom: 0.5rem;
 }
 
 .subtitulo {
-  font-size: 1.25rem; /* 20px (text-xl) */
+  font-size: 1.25rem;
   color: #57534e; /* Stone 600 */
 }
 
+/* --- 4. Estilos de Elementos Interactivos --- */
 .barra-busqueda {
   width: 100%;
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem;
   padding: 1rem;
   border: 2px solid #d6d3d1; /* Stone 300 */
-  border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
-  box-sizing: border-box; /* Para que el padding no afecte el width */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  box-sizing: border-box;
   margin-bottom: 2rem;
+  transition: all 0.2s ease-out; /* Animación de focus */
 }
 .barra-busqueda:focus {
   outline: none;
@@ -66,165 +67,23 @@ body {
   box-shadow: 0 0 0 2px var(--color-grana);
 }
 
-/* Contenedor de las tarjetas */
-.tarjetas-contenedor {
-  display: grid;
-  gap: 1rem; /* space-y-4 */
-}
-
-/* La tarjeta individual */
-.tarjeta-palabra {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
-  padding: 1.25rem; /* p-5 */
-  border-radius: 0.5rem; /* rounded-lg */
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
-}
-
-.tarjeta-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap; /* Para celulares */
-  gap: 0.5rem;
-}
-
-.palabra-nahuatl {
-  font-family: var(--font-serif);
-  font-size: 1.875rem; /* text-3xl */
+.etiqueta {
+  background-color: var(--color-maiz);
+  color: var(--color-maiz-texto);
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-texto);
-}
-
-.palabra-espanol {
-  font-size: 1.25rem; /* text-xl */
-  color: #57534e; /* Stone 600 */
-  margin-bottom: 0.75rem;
-}
-
-.reproductor-audio {
-  height: 32px;
-  max-width: 200px;
-  width: 100%;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: capitalize;
 }
 
 .etiqueta-contenedor {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem; /* gap-2 */
-  margin-top: 0.75rem; /* mt-3 */
+  gap: 0.5rem;
+  margin-top: 0.75rem;
 }
 
-.etiqueta {
-  background-color: var(--color-maiz);
-  color: var(--color-maiz-texto);
-  font-size: 0.75rem; /* text-xs */
-  font-weight: 700; /* font-bold */
-  padding: 0.25rem 0.75rem; /* px-3 py-1 */
-  border-radius: 9999px; /* rounded-full */
-  text-transform: capitalize;
-}
-
-.ejemplo-contenedor {
-  border-top: 1px solid var(--color-borde);
-  padding-top: 0.75rem; /* pt-3 */
-  margin-top: 1rem; /* mt-4 */
-}
-
-.ejemplo-texto {
-  font-style: italic;
-  color: #78716c; /* Stone 500 */
-  margin: 0 0 0.5rem 0;
-}
-
-.spinner-carga {
-  height: 4rem; /* w-16 */
-  width: 4rem; /* h-16 */
-  border-width: 8px;
-  border-style: dashed;
-  border-color: var(--color-grana);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 4rem auto;
-}
-
-.mensaje-no-resultados {
-  text-align: center;
-  color: #78716c; /* Stone 500 */
-  font-size: 1.125rem; /* text-lg */
-  padding: 2.5rem 0; /* py-10 */
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-/* --- INICIO DE MODO OSCURO --- */
-/* Esto se aplica cuando la etiqueta <html> tiene la clase ".dark" 
-*/
-.dark:root {
-  --color-fondo: #1c1917;     /* Fondo "Piedra" Oscuro (Stone 900) */
-  --color-texto: #e7e5e4;     /* Texto "Hueso" Claro (Stone 200) */
-  --color-grana: #ef4444;     /* Rojo "Grana" más brillante (Red 500) */
-  --color-maiz: #a16207;      /* Maíz oscuro (Amber 700) */
-  --color-maiz-texto: #fef3c7; /* Texto Maíz claro (Amber 100) */
-  --color-borde: #44403c;     /* Borde (Stone 700) */
-  --color-blanco: #292524;    /* Fondo de Tarjeta (Stone 800) */
-}
-
-/* Hacemos la barra de búsqueda amigable con el modo oscuro */
-.dark .barra-busqueda {
-  background-color: #44403c; /* Stone 700 */
-  border-color: #57534e; /* Stone 600 */
-  color: var(--color-texto);
-}
-
-.dark .barra-busqueda:focus {
-  background-color: var(--color-blanco);
-}
-
-/* Hacemos el Navbar amigable */
-.dark .navbar {
-  background-color: var(--color-blanco);
-  border-bottom-color: var(--color-grana);
-}
-/* --- FIN DE MODO OSCURO --- */
-
-
-/* --- INICIO DE ANIMACIONES Y ESTILOS DE BOTÓN --- */
-/* Transición suave para todos los enlaces del nav */
-.nav-link {
-  transition: all 0.2s ease-out;
-}
-.nav-link:hover {
-  color: var(--color-grana);
-  transform: translateY(-2px); /* Animación sutil de "levantar" */
-}
-
-/* Animación de "fade-in" para las tarjetas */
-.tarjeta-palabra, .tarjeta-inicio {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Estilo de Botón Principal (Call to Action) */
 .btn-principal {
   display: inline-block;
   font-family: var(--font-sans);
@@ -243,4 +102,184 @@ body {
   background-color: #991b1b; /* Rojo más oscuro (Red 800) */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
+}
+
+/* --- 5. Estilos de Página (Diccionario e Inicio) --- */
+.tarjetas-contenedor {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* REGLA UNIFICADA PARA .tarjeta-palabra */
+.tarjeta-palabra {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  
+  /* Animación de entrada */
+  animation: fadeIn 0.4s ease-out forwards; 
+  
+  /* Animación de hover */
+  transition: all 0.2s ease-out; 
+}
+
+/* Tarjeta de la HomePage */
+.tarjeta-inicio {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Estado :hover para la tarjeta */
+.tarjeta-palabra:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.titulo-letra {
+  font-size: 3rem; 
+  color: var(--color-grana);
+  grid-column: 1 / -1; /* Ocupa toda la fila del grid */
+  margin-top: 1.5rem;
+  border-bottom: 2px solid var(--color-borde);
+  padding-bottom: 0.5rem;
+}
+
+.palabra-nahuatl {
+  font-family: var(--font-serif);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--color-texto);
+}
+
+.palabra-espanol {
+  font-size: 1.25rem;
+  color: #57534e; /* Stone 600 */
+  margin-bottom: 0.75rem;
+}
+
+.palabra-raiz {
+  font-size: 0.9rem; /* Un poco más pequeño */
+  color: #a8a29e; /* Color gris claro (Stone 400) */
+  margin-top: -0.5rem; /* Acércalo a la traducción */
+  margin-bottom: 0.75rem;
+}
+
+.raiz-texto {
+  font-weight: 600; /* Negrita */
+  font-style: italic;
+  color: #78716c; /* Gris más oscuro (Stone 500) */
+}
+
+.reproductor-audio {
+  height: 32px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.ejemplo-contenedor {
+  border-top: 1px solid var(--color-borde);
+  padding-top: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ejemplo-texto {
+  font-style: italic;
+  color: #78716c; /* Stone 500 */
+  margin: 0 0 0.5rem 0;
+}
+
+/* --- 6. Estilos de Navbar (de Navbar.css) --- */
+.nav-link {
+  transition: all 0.2s ease-out;
+}
+.nav-link:hover {
+  color: var(--color-grana);
+  transform: translateY(-2px);
+}
+
+/* --- 7. Utilidades --- */
+.spinner-carga {
+  height: 4rem;
+  width: 4rem;
+  border-width: 8px;
+  border-style: dashed;
+  border-color: var(--color-grana);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 4rem auto;
+}
+
+.mensaje-no-resultados {
+  text-align: center;
+  color: #78716c; /* Stone 500 */
+  font-size: 1.125rem;
+  padding: 2.5rem 0;
+  /* Ocupa toda la fila del grid para que aparezca centrado */
+  grid-column: 1 / -1; 
+}
+
+/* --- 8. Definiciones de Keyframes (Animaciones) --- */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- 9. MODO OSCURO --- */
+.dark:root {
+  --color-fondo: #1c1917;     /* Fondo (Stone 900) */
+  --color-texto: #e7e5e4;     /* Texto (Stone 200) */
+  --color-grana: #ef4444;     /* Rojo (Red 500) */
+  --color-maiz: #a16207;      /* Maíz (Amber 700) */
+  --color-maiz-texto: #fef3c7; /* Maíz Texto (Amber 100) */
+  --color-borde: #44403c;     /* Borde (Stone 700) */
+  --color-blanco: #292524;    /* Fondo de Tarjeta (Stone 800) */
+}
+
+.dark .barra-busqueda {
+  background-color: #44403c; /* Stone 700 */
+  border-color: #57534e; /* Stone 600 */
+  color: var(--color-texto);
+}
+.dark .barra-busqueda:focus {
+  background-color: var(--color-blanco);
+}
+
+/* .dark .navbar está en Navbar.css, pero si no, iría aquí */
+.dark .navbar {
+  background-color: var(--color-blanco);
+  border-bottom-color: var(--color-grana);
+}
+
+.dark .palabra-raiz {
+  color: #78716c; /* Stone 500 en oscuro */
+}
+.dark .raiz-texto {
+  color: #a8a29e; /* Stone 400 en oscuro */
 }

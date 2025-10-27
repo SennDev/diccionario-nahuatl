@@ -1,0 +1,2189 @@
+[
+  {
+    "palabranahuatl": "-h",
+    "traduccionespanol": "Plural (verbo/poseedor)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tiknekih, Inkaltah",
+    "audioejemplourl": "",
+    "raiz": "-h",
+    "categoria": "morfema, sufijo, plural"
+  },
+  {
+    "palabranahuatl": "-k",
+    "traduccionespanol": "Pasado (verbo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Onitekiwik.",
+    "audioejemplourl": "",
+    "raiz": "-k",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "-ka",
+    "traduccionespanol": "Con (instrumental)",
+    "audiourl": "",
+    "ejemplonahuatl": "ka se kwawitl.",
+    "audioejemplourl": "",
+    "raiz": "ka",
+    "categoria": "morfema, particula, preposicion"
+  },
+  {
+    "palabranahuatl": "-ki",
+    "traduccionespanol": "Pasado (verbo, alt.)",
+    "audiourl": "",
+    "ejemplonahuatl": "Omikiki. (Murió)",
+    "audioejemplourl": "",
+    "raiz": "-ki",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "-li",
+    "traduccionespanol": "Sufijo absoluto (sust.)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kalli",
+    "audioejemplourl": "",
+    "raiz": "-li",
+    "categoria": "morfema, sufijo, sustantivo"
+  },
+  {
+    "palabranahuatl": "-meh",
+    "traduccionespanol": "Plural (animado/inanimado)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kallimeh",
+    "audioejemplourl": "",
+    "raiz": "-meh",
+    "categoria": "morfema, sufijo, plural"
+  },
+  {
+    "palabranahuatl": "-ni",
+    "traduccionespanol": "Presente habitual",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikochini. (Suelo dormir)",
+    "audioejemplourl": "",
+    "raiz": "-ni",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "-tik",
+    "traduccionespanol": "Adjetivador (-oso, -ado)",
+    "audiourl": "",
+    "ejemplonahuatl": "Chichiltik. (Rojizo)",
+    "audioejemplourl": "",
+    "raiz": "-tik",
+    "categoria": "morfema, sufijo, adjetivo"
+  },
+  {
+    "palabranahuatl": "-tin",
+    "traduccionespanol": "Plural (animado)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlakatin (Gente)",
+    "audioejemplourl": "",
+    "raiz": "-tin",
+    "categoria": "morfema, sufijo, plural"
+  },
+  {
+    "palabranahuatl": "-tl",
+    "traduccionespanol": "Sufijo absoluto (sust.)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlakatl",
+    "audioejemplourl": "",
+    "raiz": "-tl",
+    "categoria": "morfema, sufijo, sustantivo"
+  },
+  {
+    "palabranahuatl": "-tlan",
+    "traduccionespanol": "Junto a / Lugar de",
+    "audiourl": "",
+    "ejemplonahuatl": "Kwawitlan",
+    "audioejemplourl": "",
+    "raiz": "-tlan",
+    "categoria": "morfema, sufijo, lugar"
+  },
+  {
+    "palabranahuatl": "-tli",
+    "traduccionespanol": "Sufijo absoluto (sust.)",
+    "audiourl": "",
+    "ejemplonahuatl": "Konektli",
+    "audioejemplourl": "",
+    "raiz": "-tli",
+    "categoria": "morfema, sufijo, sustantivo"
+  },
+  {
+    "palabranahuatl": "-tok",
+    "traduccionespanol": "Progresivo (estar -ando)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikochitok. (Estoy durmiendo)",
+    "audioejemplourl": "",
+    "raiz": "-tok",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "-ya",
+    "traduccionespanol": "Imperfecto/Continuo (verbo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitekitiya. (Trabajaba)",
+    "audioejemplourl": "",
+    "raiz": "-ya",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "-yoh",
+    "traduccionespanol": "Lleno de / Que tiene",
+    "audiourl": "",
+    "ejemplonahuatl": "Āyoh. (Acuoso)",
+    "audioejemplourl": "",
+    "raiz": "-yoh",
+    "categoria": "morfema, sufijo, adjetivo"
+  },
+  {
+    "palabranahuatl": "-z",
+    "traduccionespanol": "Futuro (verbo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Niyāz.",
+    "audioejemplourl": "",
+    "raiz": "-z",
+    "categoria": "morfema, sufijo, verbo, tiempo"
+  },
+  {
+    "palabranahuatl": "Achi",
+    "traduccionespanol": "Poco",
+    "audiourl": "",
+    "ejemplonahuatl": "Achi xiktlāli. (Ponle poquito)",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, cantidad"
+  },
+  {
+    "palabranahuatl": "Ahsi",
+    "traduccionespanol": "Llegar",
+    "audiourl": "",
+    "ejemplonahuatl": "Niahsi",
+    "audioejemplourl": "",
+    "raiz": "ahsi",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Ahyo",
+    "traduccionespanol": "Lluvia",
+    "audiourl": "",
+    "ejemplonahuatl": "Ahyo kīza.",
+    "audioejemplourl": "",
+    "raiz": "ahyo",
+    "categoria": "sustantivo, naturaleza, clima"
+  },
+  {
+    "palabranahuatl": "Akin",
+    "traduccionespanol": "¿Quién?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Akin ya?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta, persona"
+  },
+  {
+    "palabranahuatl": "Āltekpētl",
+    "traduccionespanol": "Pueblo / Ciudad",
+    "audiourl": "",
+    "ejemplonahuatl": "Noāltekpētl weyi.",
+    "audioejemplourl": "",
+    "raiz": "āltekpē",
+    "categoria": "sustantivo, lugar"
+  },
+  {
+    "palabranahuatl": "Amatl",
+    "traduccionespanol": "Papel / Documento",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakuiloa ipan amatl.",
+    "audioejemplourl": "",
+    "raiz": "ama",
+    "categoria": "sustantivo, objeto"
+  },
+  {
+    "palabranahuatl": "Amēch-",
+    "traduccionespanol": "A ustedes (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Niamēchitta. (Yo los veo)",
+    "audioejemplourl": "",
+    "raiz": "amēch",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Amo",
+    "traduccionespanol": "No",
+    "audiourl": "",
+    "ejemplonahuatl": "Amo kwalli.",
+    "audioejemplourl": "",
+    "raiz": "amo",
+    "categoria": "morfema, particula, negacion"
+  },
+  {
+    "palabranahuatl": "amo kwalli",
+    "traduccionespanol": "Malo / Feo",
+    "audiourl": "",
+    "ejemplonahuatl": "Amo kwalli kichīwa.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Āmoxtli",
+    "traduccionespanol": "Libro",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikpōwa se āmoxtli.",
+    "audioejemplourl": "",
+    "raiz": "āmox",
+    "categoria": "sustantivo, objeto"
+  },
+  {
+    "palabranahuatl": "An-",
+    "traduccionespanol": "Ustedes (prefijo sujeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Annekih ātl.",
+    "audioejemplourl": "",
+    "raiz": "an",
+    "categoria": "morfema, prefijo, sujeto"
+  },
+  {
+    "palabranahuatl": "Anmo-",
+    "traduccionespanol": "Su (de ustedes) (posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Anmokaltah.",
+    "audioejemplourl": "",
+    "raiz": "anmo",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Ātl",
+    "traduccionespanol": "Agua",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikonīz ātl.",
+    "audioejemplourl": "",
+    "raiz": "ā",
+    "categoria": "sustantivo, bebida"
+  },
+  {
+    "palabranahuatl": "Ātlatl",
+    "traduccionespanol": "Río",
+    "audiourl": "",
+    "ejemplonahuatl": "Ātlatl weyi.",
+    "audioejemplourl": "",
+    "raiz": "ātla",
+    "categoria": "sustantivo, lugar, naturaleza, agua"
+  },
+  {
+    "palabranahuatl": "Atole",
+    "traduccionespanol": "Atole",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikonīz atole.",
+    "audioejemplourl": "",
+    "raiz": "atol",
+    "categoria": "sustantivo, bebida"
+  },
+  {
+    "palabranahuatl": "Āwakatl",
+    "traduccionespanol": "Aguacate",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki āwakatl.",
+    "audioejemplourl": "",
+    "raiz": "āwaka",
+    "categoria": "sustantivo, comida, fruta"
+  },
+  {
+    "palabranahuatl": "Āwi",
+    "traduccionespanol": "Irse",
+    "audiourl": "",
+    "ejemplonahuatl": "Oniyā. (Me fui / Ya me voy)",
+    "audioejemplourl": "",
+    "raiz": "āwi",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Axan",
+    "traduccionespanol": "Ahora / Hoy",
+    "audiourl": "",
+    "ejemplonahuatl": "Axan nitekiz.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, tiempo"
+  },
+  {
+    "palabranahuatl": "Axtle",
+    "traduccionespanol": "No",
+    "audiourl": "",
+    "ejemplonahuatl": "Axtle, na nika.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "respuesta, adverbio"
+  },
+  {
+    "palabranahuatl": "Chapoli",
+    "traduccionespanol": "Chapulín",
+    "audiourl": "",
+    "ejemplonahuatl": "Chapoli tsikwini.",
+    "audioejemplourl": "",
+    "raiz": "chapol",
+    "categoria": "sustantivo, animal, insecto"
+  },
+  {
+    "palabranahuatl": "Chichi",
+    "traduccionespanol": "Perro",
+    "audiourl": "",
+    "ejemplonahuatl": "Nochich weyi.",
+    "audioejemplourl": "",
+    "raiz": "chich",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Chichiltik",
+    "traduccionespanol": "Rojo",
+    "audiourl": "",
+    "ejemplonahuatl": "Chilli chichiltik.",
+    "audioejemplourl": "",
+    "raiz": "chichil",
+    "categoria": "adjetivo, color"
+  },
+  {
+    "palabranahuatl": "Chikāwak",
+    "traduccionespanol": "Fuerte",
+    "audiourl": "",
+    "ejemplonahuatl": "Chikāwak ne tlakatl.",
+    "audioejemplourl": "",
+    "raiz": "chikāwa",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Chilli",
+    "traduccionespanol": "Chile",
+    "audiourl": "",
+    "ejemplonahuatl": "Chilli kokok.",
+    "audioejemplourl": "",
+    "raiz": "chill",
+    "categoria": "sustantivo, comida, condimento"
+  },
+  {
+    "palabranahuatl": "Chiwa",
+    "traduccionespanol": "Hacer",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikchiwa tlaxkalli.",
+    "audioejemplourl": "",
+    "raiz": "chiw",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Choka",
+    "traduccionespanol": "Llorar",
+    "audiourl": "",
+    "ejemplonahuatl": "Konektli choka.",
+    "audioejemplourl": "",
+    "raiz": "choka",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Ehekatl",
+    "traduccionespanol": "Viento / Aire",
+    "audiourl": "",
+    "ejemplonahuatl": "Ehekatl chikāwak.",
+    "audioejemplourl": "",
+    "raiz": "eheka",
+    "categoria": "sustantivo, naturaleza, clima"
+  },
+  {
+    "palabranahuatl": "Elotl",
+    "traduccionespanol": "Elote",
+    "audiourl": "",
+    "ejemplonahuatl": "Elotl welik.",
+    "audioejemplourl": "",
+    "raiz": "elo",
+    "categoria": "sustantivo, comida, vegetal"
+  },
+  {
+    "palabranahuatl": "Elpantli",
+    "traduccionespanol": "Pecho",
+    "audiourl": "",
+    "ejemplonahuatl": "Melpantli chikāwak.",
+    "audioejemplourl": "",
+    "raiz": "elpan",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Etl",
+    "traduccionespanol": "Frijol",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki etl.",
+    "audioejemplourl": "",
+    "raiz": "e",
+    "categoria": "sustantivo, comida"
+  },
+  {
+    "palabranahuatl": "Eztli",
+    "traduccionespanol": "Sangre",
+    "audiourl": "",
+    "ejemplonahuatl": "Eztli chichiltik.",
+    "audioejemplourl": "",
+    "raiz": "ez",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Ī-",
+    "traduccionespanol": "Su (de él/ella) (posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Īkone.",
+    "audioejemplourl": "",
+    "raiz": "ī",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Ihtetl",
+    "traduccionespanol": "Estómago / Vientre",
+    "audiourl": "",
+    "ejemplonahuatl": "Nihtetl kokoya.",
+    "audioejemplourl": "",
+    "raiz": "ihte",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Ihtōtia",
+    "traduccionespanol": "Bailar",
+    "audiourl": "",
+    "ejemplonahuatl": "Ihtōtia kwalli.",
+    "audioejemplourl": "",
+    "raiz": "ihtōtia",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Ihyotl",
+    "traduccionespanol": "Respirar",
+    "audiourl": "",
+    "ejemplonahuatl": "Ni-ihyotl. (Respiro)",
+    "audioejemplourl": "",
+    "raiz": "ihyotl",
+    "categoria": "verbo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Ika",
+    "traduccionespanol": "Con / Por medio de",
+    "audiourl": "",
+    "ejemplonahuatl": "Ika nenepilli.",
+    "audioejemplourl": "",
+    "raiz": "ika",
+    "categoria": "morfema, particula, preposicion"
+  },
+  {
+    "palabranahuatl": "Ikpalli",
+    "traduccionespanol": "Silla / Asiento",
+    "audiourl": "",
+    "ejemplonahuatl": "Ximotlāli ipan ne ikpalli.",
+    "audioejemplourl": "",
+    "raiz": "ikpal",
+    "categoria": "sustantivo, objeto, casa"
+  },
+  {
+    "palabranahuatl": "Ilwikatl",
+    "traduccionespanol": "Cielo",
+    "audiourl": "",
+    "ejemplonahuatl": "Ilwikatl xoxowik.",
+    "audioejemplourl": "",
+    "raiz": "ilwika",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "In",
+    "traduccionespanol": "El / La / Lo / Los / Las",
+    "audiourl": "",
+    "ejemplonahuatl": "In kalli.",
+    "audioejemplourl": "",
+    "raiz": "in",
+    "categoria": "morfema, particula, articulo"
+  },
+  {
+    "palabranahuatl": "Īn-",
+    "traduccionespanol": "Su (de ellos/ellas) (posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Īnkaltah.",
+    "audioejemplourl": "",
+    "raiz": "īn",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Inīn",
+    "traduccionespanol": "Este / Esta / Esto",
+    "audiourl": "",
+    "ejemplonahuatl": "Inīn kwalli. (Esto está bien)",
+    "audioejemplourl": "",
+    "raiz": "inīn",
+    "categoria": "pronombre, particula"
+  },
+  {
+    "palabranahuatl": "Inōn",
+    "traduccionespanol": "Ese / Esa / Eso",
+    "audiourl": "",
+    "ejemplonahuatl": "Inōn amo kwalli. (Eso está mal)",
+    "audioejemplourl": "",
+    "raiz": "inōn",
+    "categoria": "pronombre, particula"
+  },
+  {
+    "palabranahuatl": "Ipan",
+    "traduccionespanol": "Sobre / En",
+    "audiourl": "",
+    "ejemplonahuatl": "Ipan tlapechtli.",
+    "audioejemplourl": "",
+    "raiz": "ipan",
+    "categoria": "morfema, particula, preposicion"
+  },
+  {
+    "palabranahuatl": "Isiwka",
+    "traduccionespanol": "Rápido",
+    "audiourl": "",
+    "ejemplonahuatl": "Xitlakwa isiwka.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, descripcion"
+  },
+  {
+    "palabranahuatl": "Istak",
+    "traduccionespanol": "Blanco",
+    "audiourl": "",
+    "ejemplonahuatl": "Istak ne kawayoh.",
+    "audioejemplourl": "",
+    "raiz": "ista",
+    "categoria": "adjetivo, color"
+  },
+  {
+    "palabranahuatl": "Istatl",
+    "traduccionespanol": "Sal",
+    "audiourl": "",
+    "ejemplonahuatl": "Achi istatl.",
+    "audioejemplourl": "",
+    "raiz": "ista",
+    "categoria": "sustantivo, comida, condimento"
+  },
+  {
+    "palabranahuatl": "Itta",
+    "traduccionespanol": "Ver",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikitta se tōtōtl.",
+    "audioejemplourl": "",
+    "raiz": "itta",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Iwan",
+    "traduccionespanol": "Y",
+    "audiourl": "",
+    "ejemplonahuatl": "Na iwan ta. (Yo y tú)",
+    "audioejemplourl": "",
+    "raiz": "(i)wan",
+    "categoria": "morfema, particula, conjuncion"
+  },
+  {
+    "palabranahuatl": "Ixtololo",
+    "traduccionespanol": "Ojo",
+    "audiourl": "",
+    "ejemplonahuatl": "Moxtololo xoxowik.",
+    "audioejemplourl": "",
+    "raiz": "ixtololo",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "K(i)-",
+    "traduccionespanol": "Lo/La/A él (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikitta.",
+    "audioejemplourl": "",
+    "raiz": "k(i)",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Kafentli",
+    "traduccionespanol": "Café",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikonīz kafentli.",
+    "audioejemplourl": "",
+    "raiz": "kafen",
+    "categoria": "sustantivo, bebida, prestamo"
+  },
+  {
+    "palabranahuatl": "Kaktli",
+    "traduccionespanol": "Zapato / Sandalia",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokak yankuik.",
+    "audioejemplourl": "",
+    "raiz": "kak",
+    "categoria": "sustantivo, ropa, objeto"
+  },
+  {
+    "palabranahuatl": "Kalaki",
+    "traduccionespanol": "Entrar",
+    "audiourl": "",
+    "ejemplonahuatl": "Xikalaki. (Entra)",
+    "audioejemplourl": "",
+    "raiz": "kalaki",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Kalli",
+    "traduccionespanol": "Casa",
+    "audiourl": "",
+    "ejemplonahuatl": "Niyaz kalko.",
+    "audioejemplourl": "",
+    "raiz": "kal",
+    "categoria": "sustantivo, lugar, edificio"
+  },
+  {
+    "palabranahuatl": "Kaltenko",
+    "traduccionespanol": "Afuera (de la casa)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nika kaltenko.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, lugar"
+  },
+  {
+    "palabranahuatl": "Kalzōn",
+    "traduccionespanol": "Pantalón",
+    "audiourl": "",
+    "ejemplonahuatl": "Mokalzōn tlīltik.",
+    "audioejemplourl": "",
+    "raiz": "kalzōn",
+    "categoria": "sustantivo, ropa, objeto, prestamo"
+  },
+  {
+    "palabranahuatl": "Kamatl",
+    "traduccionespanol": "Boca",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlakwa ika ikamak.",
+    "audioejemplourl": "",
+    "raiz": "kama",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Kampa",
+    "traduccionespanol": "¿Dónde? / ¿A dónde?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Kampa tiyaz?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta, lugar"
+  },
+  {
+    "palabranahuatl": "Kawayoh",
+    "traduccionespanol": "Caballo",
+    "audiourl": "",
+    "ejemplonahuatl": "Kawayoh motlaloa.",
+    "audioejemplourl": "",
+    "raiz": "kawayo",
+    "categoria": "sustantivo, animal, prestamo"
+  },
+  {
+    "palabranahuatl": "Kaxitl",
+    "traduccionespanol": "Caja / Cajón",
+    "audiourl": "",
+    "ejemplonahuatl": "Kaxitl.",
+    "audioejemplourl": "",
+    "raiz": "kax",
+    "categoria": "sustantivo, objeto"
+  },
+  {
+    "palabranahuatl": "Kechtli",
+    "traduccionespanol": "Cuello / Pescuezo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokech kokoya.",
+    "audioejemplourl": "",
+    "raiz": "kech",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Kema",
+    "traduccionespanol": "Sí",
+    "audiourl": "",
+    "ejemplonahuatl": "Kema, nikneki.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "respuesta, adverbio"
+  },
+  {
+    "palabranahuatl": "Kēnama",
+    "traduccionespanol": "¿Cuándo?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Kēnama tiwāllaz?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta, tiempo"
+  },
+  {
+    "palabranahuatl": "Kēniwki",
+    "traduccionespanol": "¿Cómo estás?",
+    "audiourl": "",
+    "ejemplonahuatl": "Na kwalli. ¿Iwan ta?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "saludo, frase, pregunta"
+  },
+  {
+    "palabranahuatl": "Kin-",
+    "traduccionespanol": "Los/Las/A ellos (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikinitta. (Yo los veo)",
+    "audioejemplourl": "",
+    "raiz": "kin",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Kīza",
+    "traduccionespanol": "Salir",
+    "audiourl": "",
+    "ejemplonahuatl": "Kīza tōnatiw.",
+    "audioejemplourl": "",
+    "raiz": "kīza",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Koa",
+    "traduccionespanol": "Comprar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikkoaz etl.",
+    "audioejemplourl": "",
+    "raiz": "koa",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Kochi",
+    "traduccionespanol": "Dormir",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokone kochi.",
+    "audioejemplourl": "",
+    "raiz": "koch",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Kokoa",
+    "traduccionespanol": "Doler / Enfermar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokokoa. (Estoy enfermo / Me duele)",
+    "audioejemplourl": "",
+    "raiz": "kokoa",
+    "categoria": "verbo, sentimiento, cuerpo"
+  },
+  {
+    "palabranahuatl": "Kokoxki",
+    "traduccionespanol": "Enfermo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nika kokoxki. (Estoy enfermo)",
+    "audioejemplourl": "",
+    "raiz": "kokox",
+    "categoria": "adjetivo, descripcion, cuerpo"
+  },
+  {
+    "palabranahuatl": "Kōmitl",
+    "traduccionespanol": "Olla / Cántaro",
+    "audiourl": "",
+    "ejemplonahuatl": "Se kōmitl ika ātl.",
+    "audioejemplourl": "",
+    "raiz": "kōmi",
+    "categoria": "sustantivo, objeto, cocina"
+  },
+  {
+    "palabranahuatl": "Konektli",
+    "traduccionespanol": "Niño/a",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokone (mi hijo/a) choka.",
+    "audioejemplourl": "",
+    "raiz": "konek",
+    "categoria": "sustantivo, familia, persona"
+  },
+  {
+    "palabranahuatl": "Kostik",
+    "traduccionespanol": "Amarillo",
+    "audiourl": "",
+    "ejemplonahuatl": "Tōnatiw kostik.",
+    "audioejemplourl": "",
+    "raiz": "kos",
+    "categoria": "adjetivo, color"
+  },
+  {
+    "palabranahuatl": "Koton",
+    "traduccionespanol": "Camisa / Blusa",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokoton istak.",
+    "audioejemplourl": "",
+    "raiz": "koton",
+    "categoria": "sustantivo, ropa, objeto, prestamo"
+  },
+  {
+    "palabranahuatl": "Kowatl",
+    "traduccionespanol": "Serpiente",
+    "audiourl": "",
+    "ejemplonahuatl": "Ne kowatl weli.",
+    "audioejemplourl": "",
+    "raiz": "kowa",
+    "categoria": "sustantivo, animal, reptil"
+  },
+  {
+    "palabranahuatl": "Koyotl",
+    "traduccionespanol": "Coyote",
+    "audiourl": "",
+    "ejemplonahuatl": "Koyotl choka.",
+    "audioejemplourl": "",
+    "raiz": "koyo",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Kwa",
+    "traduccionespanol": "Comer",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakwa etl.",
+    "audioejemplourl": "",
+    "raiz": "kwa",
+    "categoria": "verbo, comida"
+  },
+  {
+    "palabranahuatl": "Kwahuitl",
+    "traduccionespanol": "Bosque",
+    "audiourl": "",
+    "ejemplonahuatl": "Nemi kwahuitl.",
+    "audioejemplourl": "",
+    "raiz": "kwahui",
+    "categoria": "sustantivo, lugar, naturaleza"
+  },
+  {
+    "palabranahuatl": "Kwakweh",
+    "traduccionespanol": "Vaca / Toro",
+    "audiourl": "",
+    "ejemplonahuatl": "Kwakweh tlakwa.",
+    "audioejemplourl": "",
+    "raiz": "kwakwe",
+    "categoria": "sustantivo, animal, granja, prestamo"
+  },
+  {
+    "palabranahuatl": "Kwalli",
+    "traduccionespanol": "Bien / Bueno",
+    "audiourl": "",
+    "ejemplonahuatl": "Kwalli, tlasohkamati.",
+    "audioejemplourl": "",
+    "raiz": "kwal",
+    "categoria": "respuesta, adjetivo"
+  },
+  {
+    "palabranahuatl": "Kwawitl",
+    "traduccionespanol": "Árbol / Palo",
+    "audiourl": "",
+    "ejemplonahuatl": "Ne kwawitl weyi.",
+    "audioejemplourl": "",
+    "raiz": "kwawi",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Kwīka",
+    "traduccionespanol": "Cantar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki nikwīkaz. (Quiero cantar)",
+    "audioejemplourl": "",
+    "raiz": "kwīka",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Machtia",
+    "traduccionespanol": "Aprender / Enseñar",
+    "audiourl": "",
+    "ejemplonahuatl": "Timmachtiyah nāwatl.",
+    "audioejemplourl": "",
+    "raiz": "machtia",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Māitl",
+    "traduccionespanol": "Mano",
+    "audiourl": "",
+    "ejemplonahuatl": "Nima weyi. (Mi mano es grande)",
+    "audioejemplourl": "",
+    "raiz": "mā",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Mākwilli",
+    "traduccionespanol": "Cinco",
+    "audiourl": "",
+    "ejemplonahuatl": "Mākwilli tlaxkalli.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "numero"
+  },
+  {
+    "palabranahuatl": "Māpilli",
+    "traduccionespanol": "Dedo (de la mano)",
+    "audiourl": "",
+    "ejemplonahuatl": "Se māpilli.",
+    "audioejemplourl": "",
+    "raiz": "māpil",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Mati",
+    "traduccionespanol": "Saber / Sentir",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikmati nāwatl.",
+    "audioejemplourl": "",
+    "raiz": "mati",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Māwi",
+    "traduccionespanol": "Temer / Tener miedo",
+    "audiourl": "",
+    "ejemplonahuatl": "Amo ximāwi. (No tengas miedo)",
+    "audioejemplourl": "",
+    "raiz": "māwi",
+    "categoria": "verbo, sentimiento"
+  },
+  {
+    "palabranahuatl": "Māzatl",
+    "traduccionespanol": "Venado",
+    "audiourl": "",
+    "ejemplonahuatl": "Māzatl nemi kwawitlan.",
+    "audioejemplourl": "",
+    "raiz": "māza",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Mētstli",
+    "traduccionespanol": "Luna / Mes",
+    "audiourl": "",
+    "ejemplonahuatl": "Mētstli kwalli nezi.",
+    "audioejemplourl": "",
+    "raiz": "mēts",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Michtli",
+    "traduccionespanol": "Pez",
+    "audiourl": "",
+    "ejemplonahuatl": "Niktlapiya michtli.",
+    "audioejemplourl": "",
+    "raiz": "mich",
+    "categoria": "sustantivo, animal, agua"
+  },
+  {
+    "palabranahuatl": "Miki",
+    "traduccionespanol": "Morir",
+    "audiourl": "",
+    "ejemplonahuatl": "Miztli omikik. (El gato murió)",
+    "audioejemplourl": "",
+    "raiz": "miki",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Milpan",
+    "traduccionespanol": "Milpa",
+    "audiourl": "",
+    "ejemplonahuatl": "Notah tekitl milpan.",
+    "audioejemplourl": "",
+    "raiz": "mil",
+    "categoria": "sustantivo, lugar, agricultura"
+  },
+  {
+    "palabranahuatl": "Miquiztli",
+    "traduccionespanol": "Muerte",
+    "audiourl": "",
+    "ejemplonahuatl": "Miquiztli.",
+    "audioejemplourl": "",
+    "raiz": "mikiz",
+    "categoria": "sustantivo, abstracto"
+  },
+  {
+    "palabranahuatl": "Mitz-",
+    "traduccionespanol": "A ti (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nimitzitta.",
+    "audioejemplourl": "",
+    "raiz": "mitz",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Miyak",
+    "traduccionespanol": "Mucho",
+    "audiourl": "",
+    "ejemplonahuatl": "Miyak ātl.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, cantidad"
+  },
+  {
+    "palabranahuatl": "Miztli",
+    "traduccionespanol": "Gato",
+    "audiourl": "",
+    "ejemplonahuatl": "Miztli kochi kalpan.",
+    "audioejemplourl": "",
+    "raiz": "miz",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Mo-",
+    "traduccionespanol": "Tu (prefijo posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Mokone.",
+    "audioejemplourl": "",
+    "raiz": "mo",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Mo-",
+    "traduccionespanol": "Se (reflexivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Motlaloa. (Corre)",
+    "audioejemplourl": "",
+    "raiz": "mo",
+    "categoria": "morfema, prefijo, reflexivo"
+  },
+  {
+    "palabranahuatl": "Mostla",
+    "traduccionespanol": "Mañana",
+    "audiourl": "",
+    "ejemplonahuatl": "Mostla niyaz.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, tiempo"
+  },
+  {
+    "palabranahuatl": "Motlaloa",
+    "traduccionespanol": "Correr",
+    "audiourl": "",
+    "ejemplonahuatl": "Chichi motlaloa.",
+    "audioejemplourl": "",
+    "raiz": "tlaloa",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Nakatl",
+    "traduccionespanol": "Carne / Músculo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakwa nakatl. / Ninakatl chikāwak.",
+    "audioejemplourl": "",
+    "raiz": "naka",
+    "categoria": "sustantivo, comida, cuerpo"
+  },
+  {
+    "palabranahuatl": "Nākāztli",
+    "traduccionespanol": "Oreja / Oído",
+    "audiourl": "",
+    "ejemplonahuatl": "Kinā kākīstli.",
+    "audioejemplourl": "",
+    "raiz": "nākāz",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Namaka",
+    "traduccionespanol": "Vender",
+    "audiourl": "",
+    "ejemplonahuatl": "Kinamaka xōchitl.",
+    "audioejemplourl": "",
+    "raiz": "namaka",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Nāwi",
+    "traduccionespanol": "Cuatro",
+    "audiourl": "",
+    "ejemplonahuatl": "Nāwi miztli.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "numero"
+  },
+  {
+    "palabranahuatl": "Nēch-",
+    "traduccionespanol": "A mí (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kinēchitta. (Él me ve)",
+    "audioejemplourl": "",
+    "raiz": "nēch",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Neki",
+    "traduccionespanol": "Querer",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki ātl.",
+    "audioejemplourl": "",
+    "raiz": "nek",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Nelli",
+    "traduccionespanol": "Verdad",
+    "audiourl": "",
+    "ejemplonahuatl": "Nelli. (Es verdad)",
+    "audioejemplourl": "",
+    "raiz": "nel",
+    "categoria": "sustantivo, abstracto"
+  },
+  {
+    "palabranahuatl": "Nemi",
+    "traduccionespanol": "Vivir / Andar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikan ninemi. (Aquí vivo)",
+    "audioejemplourl": "",
+    "raiz": "nem",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Nemiliztli",
+    "traduccionespanol": "Vida",
+    "audiourl": "",
+    "ejemplonahuatl": "Kwalli nemiliztli.",
+    "audioejemplourl": "",
+    "raiz": "nemiliz",
+    "categoria": "sustantivo, abstracto"
+  },
+  {
+    "palabranahuatl": "Nenepilli",
+    "traduccionespanol": "Lengua",
+    "audiourl": "",
+    "ejemplonahuatl": "Ika nenepilli titlahtoah.",
+    "audioejemplourl": "",
+    "raiz": "nenepil",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Ni-",
+    "traduccionespanol": "Yo (prefijo sujeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nineki ātl.",
+    "audioejemplourl": "",
+    "raiz": "ni",
+    "categoria": "morfema, prefijo, sujeto"
+  },
+  {
+    "palabranahuatl": "Nikan",
+    "traduccionespanol": "Aquí",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikan nika. (Aquí estoy)",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, lugar"
+  },
+  {
+    "palabranahuatl": "No-",
+    "traduccionespanol": "Mi (prefijo posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokone.",
+    "audioejemplourl": "",
+    "raiz": "no",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Noknīw",
+    "traduccionespanol": "Mi hermano/a",
+    "audiourl": "",
+    "ejemplonahuatl": "Noknīw mopalēwiya.",
+    "audioejemplourl": "",
+    "raiz": "knīw",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Nokoltah",
+    "traduccionespanol": "Mi abuelo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokoltah wehkapan nemi.",
+    "audioejemplourl": "",
+    "raiz": "koltah",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Nomon",
+    "traduccionespanol": "Mi yerno",
+    "audiourl": "",
+    "ejemplonahuatl": "Nomon kwalli tlakatl.",
+    "audioejemplourl": "",
+    "raiz": "mon",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Nonan",
+    "traduccionespanol": "Mi mamá",
+    "audiourl": "",
+    "ejemplonahuatl": "Nonan kichīwa tlakwalli.",
+    "audioejemplourl": "",
+    "raiz": "nan",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Nosih",
+    "traduccionespanol": "Mi abuela",
+    "audiourl": "",
+    "ejemplonahuatl": "Nosih kitoah...",
+    "audioejemplourl": "",
+    "raiz": "sih",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Nosiwāmon",
+    "traduccionespanol": "Mi nuera",
+    "audiourl": "",
+    "ejemplonahuatl": "Nosiwāmon nikan nemi.",
+    "audioejemplourl": "",
+    "raiz": "siwāmon",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Notah",
+    "traduccionespanol": "Mi papá",
+    "audiourl": "",
+    "ejemplonahuatl": "Notah tekitl milpan.",
+    "audioejemplourl": "",
+    "raiz": "tah",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Notoka...",
+    "traduccionespanol": "Me llamo...",
+    "audiourl": "",
+    "ejemplonahuatl": "Notoka Senndev.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "frase, respuesta, presentacion"
+  },
+  {
+    "palabranahuatl": "Nowēhpol",
+    "traduccionespanol": "Mi cuñado",
+    "audiourl": "",
+    "ejemplonahuatl": "Nowēhpol tekitl.",
+    "audioejemplourl": "",
+    "raiz": "wēhpol",
+    "categoria": "sustantivo, familia"
+  },
+  {
+    "palabranahuatl": "Ø-",
+    "traduccionespanol": "Él/Ella (prefijo sujeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nemi.",
+    "audioejemplourl": "",
+    "raiz": "Ø",
+    "categoria": "morfema, prefijo, sujeto"
+  },
+  {
+    "palabranahuatl": "Ohtli",
+    "traduccionespanol": "Camino",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikan se ohtli.",
+    "audioejemplourl": "",
+    "raiz": "oh",
+    "categoria": "sustantivo, lugar"
+  },
+  {
+    "palabranahuatl": "Ome",
+    "traduccionespanol": "Dos",
+    "audiourl": "",
+    "ejemplonahuatl": "Ome kalli.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "numero"
+  },
+  {
+    "palabranahuatl": "Omitl",
+    "traduccionespanol": "Hueso",
+    "audiourl": "",
+    "ejemplonahuatl": "Se omitl istak.",
+    "audioejemplourl": "",
+    "raiz": "omi",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Ompa",
+    "traduccionespanol": "Allá",
+    "audiourl": "",
+    "ejemplonahuatl": "Ompa nemi.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, lugar"
+  },
+  {
+    "palabranahuatl": "Oni",
+    "traduccionespanol": "Beber",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikonīz ātl.",
+    "audioejemplourl": "",
+    "raiz": "oni",
+    "categoria": "verbo, bebida"
+  },
+  {
+    "palabranahuatl": "Ozomatli",
+    "traduccionespanol": "Mono",
+    "audiourl": "",
+    "ejemplonahuatl": "Ozomatli tlēhko.",
+    "audioejemplourl": "",
+    "raiz": "ozoma",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Pa",
+    "traduccionespanol": "Estar feliz",
+    "audiourl": "",
+    "ejemplonahuatl": "Nipa. (Estoy feliz)",
+    "audioejemplourl": "",
+    "raiz": "pa",
+    "categoria": "verbo, sentimiento"
+  },
+  {
+    "palabranahuatl": "Pahchoka",
+    "traduccionespanol": "Azúcar / Piloncillo",
+    "audiourl": "",
+    "ejemplonahuatl": "Xiktlāli pahchoka.",
+    "audioejemplourl": "",
+    "raiz": "pahchoka",
+    "categoria": "sustantivo, comida"
+  },
+  {
+    "palabranahuatl": "Pālewiya",
+    "traduccionespanol": "Ayudar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikpālewiya nonan.",
+    "audioejemplourl": "",
+    "raiz": "pālewiya",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Pampa",
+    "traduccionespanol": "Porque / Para",
+    "audiourl": "",
+    "ejemplonahuatl": "Pampa nimitztlazohtla.",
+    "audioejemplourl": "",
+    "raiz": "pampa",
+    "categoria": "morfema, particula, conjuncion"
+  },
+  {
+    "palabranahuatl": "Pāpalotl",
+    "traduccionespanol": "Mariposa",
+    "audiourl": "",
+    "ejemplonahuatl": "Pāpalotl patlāni.",
+    "audioejemplourl": "",
+    "raiz": "pāpalo",
+    "categoria": "sustantivo, animal, insecto"
+  },
+  {
+    "palabranahuatl": "Patlāni",
+    "traduccionespanol": "Volar",
+    "audiourl": "",
+    "ejemplonahuatl": "Tōtōtl patlāni.",
+    "audioejemplourl": "",
+    "raiz": "patlāni",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Petlatl",
+    "traduccionespanol": "Petate / Tapete",
+    "audiourl": "",
+    "ejemplonahuatl": "Kochi ipan petlatl.",
+    "audioejemplourl": "",
+    "raiz": "petla",
+    "categoria": "sustantivo, objeto, casa"
+  },
+  {
+    "palabranahuatl": "Pialli",
+    "traduccionespanol": "Hola",
+    "audiourl": "",
+    "ejemplonahuatl": "Pialli! Kēniwki?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "saludo, frase"
+  },
+  {
+    "palabranahuatl": "Pihtli",
+    "traduccionespanol": "Gallina",
+    "audiourl": "",
+    "ejemplonahuatl": "Pihtli tlatlāza se totoltetl.",
+    "audioejemplourl": "",
+    "raiz": "pih",
+    "categoria": "sustantivo, animal, ave"
+  },
+  {
+    "palabranahuatl": "Piltsintli",
+    "traduccionespanol": "Bebé",
+    "audiourl": "",
+    "ejemplonahuatl": "Ne piltsintli kochi.",
+    "audioejemplourl": "",
+    "raiz": "piltsin",
+    "categoria": "sustantivo, familia, persona"
+  },
+  {
+    "palabranahuatl": "Pitsik",
+    "traduccionespanol": "Pequeño",
+    "audiourl": "",
+    "ejemplonahuatl": "Nomiz pitsik.",
+    "audioejemplourl": "",
+    "raiz": "pitsik",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Pitzotl",
+    "traduccionespanol": "Cerdo",
+    "audiourl": "",
+    "ejemplonahuatl": "Pitzotl weyi.",
+    "audioejemplourl": "",
+    "raiz": "pitzo",
+    "categoria": "sustantivo, animal, granja"
+  },
+  {
+    "palabranahuatl": "Pixka",
+    "traduccionespanol": "Cosechar / Guardar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikpixka sentli.",
+    "audioejemplourl": "",
+    "raiz": "pixka",
+    "categoria": "verbo, agricultura"
+  },
+  {
+    "palabranahuatl": "Popotl",
+    "traduccionespanol": "Escoba",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikchīwa ika popotl.",
+    "audioejemplourl": "",
+    "raiz": "popo",
+    "categoria": "sustantivo, objeto, casa"
+  },
+  {
+    "palabranahuatl": "Pōwa",
+    "traduccionespanol": "Leer / Contar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikpōwa se āmoxtli.",
+    "audioejemplourl": "",
+    "raiz": "pōwa",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Sayoli",
+    "traduccionespanol": "Mosca",
+    "audiourl": "",
+    "ejemplonahuatl": "Miyak sayoli.",
+    "audioejemplourl": "",
+    "raiz": "sayol",
+    "categoria": "sustantivo, animal, insecto"
+  },
+  {
+    "palabranahuatl": "Se",
+    "traduccionespanol": "Uno",
+    "audiourl": "",
+    "ejemplonahuatl": "Se tlakatl.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "numero"
+  },
+  {
+    "palabranahuatl": "Sentli",
+    "traduccionespanol": "Maíz",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikpixka sentli.",
+    "audioejemplourl": "",
+    "raiz": "sen",
+    "categoria": "sustantivo, comida, agricultura"
+  },
+  {
+    "palabranahuatl": "Sewa",
+    "traduccionespanol": "Hace frío",
+    "audiourl": "",
+    "ejemplonahuatl": "Miyak sewa.",
+    "audioejemplourl": "",
+    "raiz": "sewa",
+    "categoria": "verbo, clima, tiempo"
+  },
+  {
+    "palabranahuatl": "Sihwatl",
+    "traduccionespanol": "Mujer",
+    "audiourl": "",
+    "ejemplonahuatl": "Ne sihwatl kwalli tekitl.",
+    "audioejemplourl": "",
+    "raiz": "sihwa",
+    "categoria": "sustantivo, persona"
+  },
+  {
+    "palabranahuatl": "Sītlalli",
+    "traduccionespanol": "Estrella",
+    "audiourl": "",
+    "ejemplonahuatl": "Sītlalli pipixka.",
+    "audioejemplourl": "",
+    "raiz": "sītlal",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Te-",
+    "traduccionespanol": "Alguien (objeto indefinido)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitēitta. (Veo a alguien)",
+    "audioejemplourl": "",
+    "raiz": "te",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Tēch-",
+    "traduccionespanol": "A nosotros (objeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kitēchitta. (Él nos ve)",
+    "audioejemplourl": "",
+    "raiz": "tēch",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Techpālewi!",
+    "traduccionespanol": "¡Ayúdame!",
+    "audiourl": "",
+    "ejemplonahuatl": "¡Xinechpālewi!",
+    "audioejemplourl": "",
+    "raiz": "pālewi",
+    "categoria": "verbo, frase, imperativo"
+  },
+  {
+    "palabranahuatl": "Teki",
+    "traduccionespanol": "Cortar",
+    "audiourl": "",
+    "ejemplonahuatl": "Niktekiz ne kwawitl.",
+    "audioejemplourl": "",
+    "raiz": "teki",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Teki",
+    "traduccionespanol": "Trabajar",
+    "audiourl": "",
+    "ejemplonahuatl": "Niteki milpan.",
+    "audioejemplourl": "",
+    "raiz": "teki",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Temachtihketl",
+    "traduccionespanol": "Maestro/a",
+    "audiourl": "",
+    "ejemplonahuatl": "Ne temachtihketl tēmachtiya.",
+    "audioejemplourl": "",
+    "raiz": "temachtihke",
+    "categoria": "sustantivo, profesion, persona"
+  },
+  {
+    "palabranahuatl": "Tentli",
+    "traduccionespanol": "Labio(s)",
+    "audiourl": "",
+    "ejemplonahuatl": "Noten kokok.",
+    "audioejemplourl": "",
+    "raiz": "ten",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Tepētl",
+    "traduccionespanol": "Cerro / Montaña",
+    "audiourl": "",
+    "ejemplonahuatl": "Niyaz tepēko.",
+    "audioejemplourl": "",
+    "raiz": "tepē",
+    "categoria": "sustantivo, lugar, naturaleza"
+  },
+  {
+    "palabranahuatl": "Tepozkaxitl",
+    "traduccionespanol": "Caja (de metal/madera)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kipiha tomīn ipan tepozkaxitl.",
+    "audioejemplourl": "",
+    "raiz": "tepozkax",
+    "categoria": "sustantivo, objeto, prestamo"
+  },
+  {
+    "palabranahuatl": "Tetl",
+    "traduccionespanol": "Piedra",
+    "audiourl": "",
+    "ejemplonahuatl": "Weyi ne tetl.",
+    "audioejemplourl": "",
+    "raiz": "te",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Ti-",
+    "traduccionespanol": "Tú (prefijo sujeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tineki ātl.",
+    "audioejemplourl": "",
+    "raiz": "ti",
+    "categoria": "morfema, prefijo, sujeto"
+  },
+  {
+    "palabranahuatl": "Ti-...-h",
+    "traduccionespanol": "Nosotros (sujeto)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tinekih ātl.",
+    "audioejemplourl": "",
+    "raiz": "ti-...-h",
+    "categoria": "morfema, circunfijo, sujeto"
+  },
+  {
+    "palabranahuatl": "Tiankistli",
+    "traduccionespanol": "Mercado / Tianguis",
+    "audiourl": "",
+    "ejemplonahuatl": "Niyaz tiankisko.",
+    "audioejemplourl": "",
+    "raiz": "tiankis",
+    "categoria": "sustantivo, lugar"
+  },
+  {
+    "palabranahuatl": "Timoittazkeh",
+    "traduccionespanol": "Nos vemos",
+    "audiourl": "",
+    "ejemplonahuatl": "Kema, timoittazkeh!",
+    "audioejemplourl": "",
+    "raiz": "itta",
+    "categoria": "frase, despedida"
+  },
+  {
+    "palabranahuatl": "Tla-",
+    "traduccionespanol": "Algo (objeto indefinido)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakwa. (Como algo)",
+    "audioejemplourl": "",
+    "raiz": "tla",
+    "categoria": "morfema, prefijo, objeto"
+  },
+  {
+    "palabranahuatl": "Tlahtoa",
+    "traduccionespanol": "Hablar",
+    "audiourl": "",
+    "ejemplonahuatl": "Titlahtoah nāwatl.",
+    "audioejemplourl": "",
+    "raiz": "tlahtoa",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlahtōlli",
+    "traduccionespanol": "Palabra / Idioma",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikmati nāwatl tlahtōlli.",
+    "audioejemplourl": "",
+    "raiz": "tlahtōl",
+    "categoria": "sustantivo, abstracto"
+  },
+  {
+    "palabranahuatl": "Tlakatl",
+    "traduccionespanol": "Hombre / Persona",
+    "audiourl": "",
+    "ejemplonahuatl": "Se tlakatl nikan nemi.",
+    "audioejemplourl": "",
+    "raiz": "tlaka",
+    "categoria": "sustantivo, persona"
+  },
+  {
+    "palabranahuatl": "Tlakuiloa",
+    "traduccionespanol": "Escribir / Pintar",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakuiloa se amatl.",
+    "audioejemplourl": "",
+    "raiz": "tlakuiloa",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlakwa",
+    "traduccionespanol": "Comer",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlakwa etl.",
+    "audioejemplourl": "",
+    "raiz": "kwa",
+    "categoria": "verbo, comida"
+  },
+  {
+    "palabranahuatl": "Tlakwalli",
+    "traduccionespanol": "Comida",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki tlakwalli.",
+    "audioejemplourl": "",
+    "raiz": "tlakwal",
+    "categoria": "sustantivo, comida"
+  },
+  {
+    "palabranahuatl": "Tlālia",
+    "traduccionespanol": "Poner / Colocar",
+    "audiourl": "",
+    "ejemplonahuatl": "Xiktlāli nikan. (Ponlo aquí)",
+    "audioejemplourl": "",
+    "raiz": "tlālia",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlalli",
+    "traduccionespanol": "Tierra",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlalli xoxowik.",
+    "audioejemplourl": "",
+    "raiz": "tlal",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Tlamachtilli",
+    "traduccionespanol": "Estudiante",
+    "audiourl": "",
+    "ejemplonahuatl": "Na nitlamachtilli.",
+    "audioejemplourl": "",
+    "raiz": "tlamachtil",
+    "categoria": "sustantivo, profesion, persona"
+  },
+  {
+    "palabranahuatl": "Tlamantli",
+    "traduccionespanol": "Cosa",
+    "audiourl": "",
+    "ejemplonahuatl": "Se tlamantli. (Una cosa)",
+    "audioejemplourl": "",
+    "raiz": "tlaman",
+    "categoria": "sustantivo, abstracto"
+  },
+  {
+    "palabranahuatl": "Tlani",
+    "traduccionespanol": "Ganar / Pedir",
+    "audiourl": "",
+    "ejemplonahuatl": "Nitlani se tlaxkalli.",
+    "audioejemplourl": "",
+    "raiz": "tlani",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlantli",
+    "traduccionespanol": "Diente",
+    "audiourl": "",
+    "ejemplonahuatl": "Notlan istak.",
+    "audioejemplourl": "",
+    "raiz": "tlan",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Tlapechtli",
+    "traduccionespanol": "Cama / Mesa",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlatlāli ipan tlapechtli.",
+    "audioejemplourl": "",
+    "raiz": "tlapech",
+    "categoria": "sustantivo, objeto, casa"
+  },
+  {
+    "palabranahuatl": "Tlaquemitl",
+    "traduccionespanol": "Ropa",
+    "audiourl": "",
+    "ejemplonahuatl": "Notlaquēn yektik.",
+    "audioejemplourl": "",
+    "raiz": "tlaquemi",
+    "categoria": "sustantivo, ropa, objeto"
+  },
+  {
+    "palabranahuatl": "Tlatla",
+    "traduccionespanol": "Arder / Quemarse",
+    "audiourl": "",
+    "ejemplonahuatl": "Tletl tlatla.",
+    "audioejemplourl": "",
+    "raiz": "tlatla",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlaxkalli",
+    "traduccionespanol": "Tortilla",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikchiwa tlaxkalli.",
+    "audioejemplourl": "",
+    "raiz": "tlaxkal",
+    "categoria": "sustantivo, comida"
+  },
+  {
+    "palabranahuatl": "Tlazohtla",
+    "traduccionespanol": "Amar / Querer",
+    "audiourl": "",
+    "ejemplonahuatl": "Nimitztlazohtla. (Te amo)",
+    "audioejemplourl": "",
+    "raiz": "tlazohtla",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Tlazotlaliztli",
+    "traduccionespanol": "Amor",
+    "audiourl": "",
+    "ejemplonahuatl": "Weyi ne tlazotlaliztli.",
+    "audioejemplourl": "",
+    "raiz": "tlazotlaliz",
+    "categoria": "sustantivo, abstracto, sentimiento"
+  },
+  {
+    "palabranahuatl": "Tlein",
+    "traduccionespanol": "¿Qué?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Tlein tikneki?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta"
+  },
+  {
+    "palabranahuatl": "Tlein motoka",
+    "traduccionespanol": "¿Cómo te llamas?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Tlein motoka? Na notoka...",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta, frase"
+  },
+  {
+    "palabranahuatl": "Tleka",
+    "traduccionespanol": "¿Por qué?",
+    "audiourl": "",
+    "ejemplonahuatl": "¿Tleka tichoka?",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "pregunta"
+  },
+  {
+    "palabranahuatl": "Tletl",
+    "traduccionespanol": "Fuego",
+    "audiourl": "",
+    "ejemplonahuatl": "Tletl tlatla.",
+    "audioejemplourl": "",
+    "raiz": "tle",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Tlīltik",
+    "traduccionespanol": "Negro",
+    "audiourl": "",
+    "ejemplonahuatl": "Noknīw itzotl tlīltik.",
+    "audioejemplourl": "",
+    "raiz": "tlīl",
+    "categoria": "adjetivo, color"
+  },
+  {
+    "palabranahuatl": "To-",
+    "traduccionespanol": "Nuestro (posesivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Tokaltah.",
+    "audioejemplourl": "",
+    "raiz": "to",
+    "categoria": "morfema, prefijo, posesivo"
+  },
+  {
+    "palabranahuatl": "Tōchtli",
+    "traduccionespanol": "Conejo",
+    "audiourl": "",
+    "ejemplonahuatl": "Tōchtli tsikwini.",
+    "audioejemplourl": "",
+    "raiz": "tōch",
+    "categoria": "sustantivo, animal"
+  },
+  {
+    "palabranahuatl": "Toka",
+    "traduccionespanol": "Sembrar / Enterrar",
+    "audiourl": "",
+    "ejemplonahuatl": "Niktoka sentli.",
+    "audioejemplourl": "",
+    "raiz": "toka",
+    "categoria": "verbo, agricultura"
+  },
+  {
+    "palabranahuatl": "Tomātl",
+    "traduccionespanol": "Tomate",
+    "audiourl": "",
+    "ejemplonahuatl": "Kikwa tomātl.",
+    "audioejemplourl": "",
+    "raiz": "tomā",
+    "categoria": "sustantivo, comida, vegetal"
+  },
+  {
+    "palabranahuatl": "Tomīn",
+    "traduccionespanol": "Dinero",
+    "audiourl": "",
+    "ejemplonahuatl": "Amo nikpiya tomīn.",
+    "audioejemplourl": "",
+    "raiz": "tomīn",
+    "categoria": "sustantivo, objeto, prestamo"
+  },
+  {
+    "palabranahuatl": "Tōna",
+    "traduccionespanol": "Hace sol / calor",
+    "audiourl": "",
+    "ejemplonahuatl": "Miyak tōna.",
+    "audioejemplourl": "",
+    "raiz": "tōna",
+    "categoria": "verbo, clima, tiempo"
+  },
+  {
+    "palabranahuatl": "Tōnal",
+    "traduccionespanol": "Día / Calor",
+    "audiourl": "",
+    "ejemplonahuatl": "Axan kwalli tōnal.",
+    "audioejemplourl": "",
+    "raiz": "tōnal",
+    "categoria": "sustantivo, tiempo"
+  },
+  {
+    "palabranahuatl": "Tōnatiw",
+    "traduccionespanol": "Sol",
+    "audiourl": "",
+    "ejemplonahuatl": "Tōnatiw tōna.",
+    "audioejemplourl": "",
+    "raiz": "tōnatiw",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Tōpechtli",
+    "traduccionespanol": "Canasta / Cesto",
+    "audiourl": "",
+    "ejemplonahuatl": "Kipiha ipan tōpechtli.",
+    "audioejemplourl": "",
+    "raiz": "tōpech",
+    "categoria": "sustantivo, objeto"
+  },
+  {
+    "palabranahuatl": "Totoli",
+    "traduccionespanol": "Guajolote / Pavo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikkoaz se totoli.",
+    "audioejemplourl": "",
+    "raiz": "totol",
+    "categoria": "sustantivo, animal, comida, ave"
+  },
+  {
+    "palabranahuatl": "Totoltetl",
+    "traduccionespanol": "Huevo (de ave)",
+    "audiourl": "",
+    "ejemplonahuatl": "Nikneki ome totoltetl.",
+    "audioejemplourl": "",
+    "raiz": "totolte",
+    "categoria": "sustantivo, comida"
+  },
+  {
+    "palabranahuatl": "Tōtōtl",
+    "traduccionespanol": "Pájaro",
+    "audiourl": "",
+    "ejemplonahuatl": "Tōtōtl patlāni.",
+    "audioejemplourl": "",
+    "raiz": "tōtō",
+    "categoria": "sustantivo, animal, ave"
+  },
+  {
+    "palabranahuatl": "Tzintamalli",
+    "traduccionespanol": "Nalgas / Trasero",
+    "audiourl": "",
+    "ejemplonahuatl": "Tzintamalli.",
+    "audioejemplourl": "",
+    "raiz": "tzintamal",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Tzonkalli",
+    "traduccionespanol": "Cabello",
+    "audiourl": "",
+    "ejemplonahuatl": "Notzonkal tlīltik.",
+    "audioejemplourl": "",
+    "raiz": "tzonkal",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Tzontekomatl",
+    "traduccionespanol": "Cabeza",
+    "audiourl": "",
+    "ejemplonahuatl": "Notzontekon kokoya.",
+    "audioejemplourl": "",
+    "raiz": "tzontekon",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Tzowakalli",
+    "traduccionespanol": "Cocina",
+    "audiourl": "",
+    "ejemplonahuatl": "Nemi tzowakalko.",
+    "audioejemplourl": "",
+    "raiz": "tzowakal",
+    "categoria": "sustantivo, lugar, edificio"
+  },
+  {
+    "palabranahuatl": "Wāllah",
+    "traduccionespanol": "Traer",
+    "audiourl": "",
+    "ejemplonahuatl": "Xikwālika ātl. (Trae el agua)",
+    "audioejemplourl": "",
+    "raiz": "wālika",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Wan",
+    "traduccionespanol": "Y",
+    "audiourl": "",
+    "ejemplonahuatl": "Na wan ta.",
+    "audioejemplourl": "",
+    "raiz": "(i)wan",
+    "categoria": "morfema, particula, conjuncion"
+  },
+  {
+    "palabranahuatl": "Wēkāw",
+    "traduccionespanol": "Viejo / Usado",
+    "audiourl": "",
+    "ejemplonahuatl": "Notlaquēn wēkāw.",
+    "audioejemplourl": "",
+    "raiz": "wēkāw",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Weyi",
+    "traduccionespanol": "Grande",
+    "audiourl": "",
+    "ejemplonahuatl": "Nochich weyi.",
+    "audioejemplourl": "",
+    "raiz": "weyi",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Wīts",
+    "traduccionespanol": "Venir",
+    "audiourl": "",
+    "ejemplonahuatl": "Xiwītz nikan. (Ven aquí)",
+    "audioejemplourl": "",
+    "raiz": "wīts",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Ximopanolti",
+    "traduccionespanol": "Pase usted / Bienvenido",
+    "audiourl": "",
+    "ejemplonahuatl": "Ximopanolti nokalko.",
+    "audioejemplourl": "",
+    "raiz": "panolti",
+    "categoria": "saludo, frase, formal"
+  },
+  {
+    "palabranahuatl": "Xitl",
+    "traduccionespanol": "Pie / Pierna",
+    "audiourl": "",
+    "ejemplonahuatl": "Moxitl pitsik.",
+    "audioejemplourl": "",
+    "raiz": "xi",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Xōchihkwalli",
+    "traduccionespanol": "Fruta",
+    "audiourl": "",
+    "ejemplonahuatl": "Xōchihkwalli welik.",
+    "audioejemplourl": "",
+    "raiz": "xōchikwal",
+    "categoria": "sustantivo, comida, fruta"
+  },
+  {
+    "palabranahuatl": "Xōchitl",
+    "traduccionespanol": "Flor",
+    "audiourl": "",
+    "ejemplonahuatl": "Xōchitl kwalli ihya.",
+    "audioejemplourl": "",
+    "raiz": "xōchi",
+    "categoria": "sustantivo, naturaleza"
+  },
+  {
+    "palabranahuatl": "Xoktli",
+    "traduccionespanol": "Cazuela / Plato",
+    "audiourl": "",
+    "ejemplonahuatl": "Tlakwa ipan se xoktli.",
+    "audioejemplourl": "",
+    "raiz": "xok",
+    "categoria": "sustantivo, objeto, cocina"
+  },
+  {
+    "palabranahuatl": "Xoxowik",
+    "traduccionespanol": "Verde / Azul",
+    "audiourl": "",
+    "ejemplonahuatl": "Ilwikatl xoxowik.",
+    "audioejemplourl": "",
+    "raiz": "xoxowi",
+    "categoria": "adjetivo, color"
+  },
+  {
+    "palabranahuatl": "Yākātl",
+    "traduccionespanol": "Nariz",
+    "audiourl": "",
+    "ejemplonahuatl": "Neyākātl weyi.",
+    "audioejemplourl": "",
+    "raiz": "yāka",
+    "categoria": "sustantivo, cuerpo"
+  },
+  {
+    "palabranahuatl": "Yālwa",
+    "traduccionespanol": "Ayer",
+    "audiourl": "",
+    "ejemplonahuatl": "Yālwa nitekik.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, tiempo"
+  },
+  {
+    "palabranahuatl": "Yankwik",
+    "traduccionespanol": "Nuevo",
+    "audiourl": "",
+    "ejemplonahuatl": "Nokak yankuik.",
+    "audioejemplourl": "",
+    "raiz": "yankwik",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Yāz",
+    "traduccionespanol": "Ir",
+    "audiourl": "",
+    "ejemplonahuatl": "Niyāz kalko.",
+    "audioejemplourl": "",
+    "raiz": "yā",
+    "categoria": "verbo, movimiento"
+  },
+  {
+    "palabranahuatl": "Yektik",
+    "traduccionespanol": "Bonito / Bueno / Limpio",
+    "audiourl": "",
+    "ejemplonahuatl": "Yektik ne sihwatl.",
+    "audioejemplourl": "",
+    "raiz": "yek",
+    "categoria": "adjetivo, descripcion"
+  },
+  {
+    "palabranahuatl": "Yeyi",
+    "traduccionespanol": "Tres",
+    "audiourl": "",
+    "ejemplonahuatl": "Yeyi chichi.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "numero"
+  },
+  {
+    "palabranahuatl": "Yōl",
+    "traduccionespanol": "Corazón (espíritu)",
+    "audiourl": "",
+    "ejemplonahuatl": "Kwalli iyōl.",
+    "audioejemplourl": "",
+    "raiz": "yōl",
+    "categoria": "sustantivo, abstracto, cuerpo"
+  },
+  {
+    "palabranahuatl": "Yōli",
+    "traduccionespanol": "Vivir (estar vivo)",
+    "audiourl": "",
+    "ejemplonahuatl": "Totoli yōli.",
+    "audioejemplourl": "",
+    "raiz": "yōli",
+    "categoria": "verbo"
+  },
+  {
+    "palabranahuatl": "Yōlīk",
+    "traduccionespanol": "Despacio",
+    "audiourl": "",
+    "ejemplonahuatl": "Xitlahtoa yōlīk.",
+    "audioejemplourl": "",
+    "raiz": "",
+    "categoria": "adverbio, descripcion"
+  },
+  {
+    "palabranahuatl": "Yōllōtl",
+    "traduccionespanol": "Corazón",
+    "audiourl": "",
+    "ejemplonahuatl": "Noyōllo tlazohtla.",
+    "audioejemplourl": "",
+    "raiz": "yōllō",
+    "categoria": "sustantivo, cuerpo, abstracto"
+  },
+  {
+    "palabranahuatl": "Yowalli",
+    "traduccionespanol": "Noche",
+    "audiourl": "",
+    "ejemplonahuatl": "Sewa ipan yowalli.",
+    "audioejemplourl": "",
+    "raiz": "yowal",
+    "categoria": "sustantivo, tiempo"
+  }
+]
