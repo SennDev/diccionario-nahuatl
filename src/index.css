@@ -1,285 +1,593 @@
-/* --- 1. Definición de Colores y Fuentes (Paleta "Tierra y Grana") --- */
+/* --- 1. Paleta Dinámica "Calor/Frío Consistente v11" --- */
 :root {
   /* Fuentes */
-  --font-serif: 'Alegreya', serif; /* Para títulos */
-  --font-sans: 'Lato', sans-serif;   /* Para texto */
+  --font-serif: 'Alegreya', serif;
+  --font-sans: 'Lato', sans-serif;
 
-  /* Colores */
-  --color-fondo: #f5f5f4;     /* Color "Hueso" (Stone 100) */
-  --color-texto: #292524;     /* Color "Tinta" (Stone 800) */
-  --color-grana: #b91c1c;     /* Color "Cochinilla" (Red 700) */
-  --color-maiz: #fde68a;      /* Color "Maíz" (Amber 200) */
-  --color-maiz-texto: #78350f; /* (Amber 800) */
-  --color-borde: #e7e5e4;    /* (Stone 200) */
-  --color-blanco: #ffffff;
+  /* === MODO CLARO (Cálido: Rojos/Cobrizos) === */
+  --clr-bg: #f2f2f2;
+  --clr-text: #3a3a3c;
+  --clr-text-secondary: #78716c;
+  --clr-card-bg: var(--clr-bg);
+  --clr-white: #ffffff;
+  --clr-highlight: #ffffff;
+  --clr-shadow: #d1d1d1;
+  --clr-border-sutil: #e0e0e0;
+
+  /* Acentos Claros (Rojos/Amarillos) */
+  --clr-primary: #ed4e45;
+  --clr-primary-darker: #D6453D;
+  --clr-primary-shadow: rgba(237, 78, 69, 0.2);
+  --clr-secondary: #f3b124;
+  --clr-secondary-text: #5c4505;
+  --clr-tertiary: #B05A4F; /* Terracota */
+  --clr-tertiary-darker: #9A4C42;
+  --clr-intense: #c41f7b;
+  --clr-accent-cool: #0fc0ac; /* Turquesa (Usado en gradientes oscuros) */
+
+
+  /* Sombras Neomorfismo Claro */
+  --shadow-light: -4px -4px 8px var(--clr-highlight);
+  --shadow-dark: 4px 4px 8px var(--clr-shadow);
+  --shadow-inset-light: inset -2px -2px 5px var(--clr-highlight);
+  --shadow-inset-dark: inset 2px 2px 5px var(--clr-shadow);
 }
 
-/* --- 2. Reseteo Básico y Estilos Globales --- */
+/* --- 2. Reseteo y Globales --- */
 body {
   margin: 0;
   font-family: var(--font-sans);
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* --- 3. Estilos de Layout --- */
+/* --- 3. Layout --- */
 .contenedor-principal {
-  max-width: 800px; /* Incrementado un poco para el grid */
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem 1.5rem;
 }
 
-.header {
-  text-align: center;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
+.header { text-align: center; margin: 2.5rem 0; }
 
 .titulo-principal {
   font-family: var(--font-serif);
-  font-size: 3rem; 
+  font-size: 3rem;
   font-weight: 700;
-  color: var(--color-grana);
+  color: var(--clr-primary); /* Dinámico */
   margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  transition: color 0.3s ease;
 }
 
 .subtitulo {
   font-size: 1.25rem;
-  color: #57534e; /* Stone 600 */
+  color: var(--clr-text-secondary);
+  transition: color 0.3s ease;
 }
 
-/* --- 4. Estilos de Elementos Interactivos --- */
+/* --- 4. Elementos Interactivos (Neomorfismo Híbrido v11) --- */
 .barra-busqueda {
-  width: 100%;
-  font-size: 1.125rem;
-  padding: 1rem;
-  border: 2px solid #d6d3d1; /* Stone 300 */
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  box-sizing: border-box;
-  margin-bottom: 2rem;
-  transition: all 0.2s ease-out; /* Animación de focus */
+  width: 100%; font-size: 1.1rem; padding: 1rem 1.5rem; border: none;
+  border-radius: 25px; background-color: var(--clr-bg); color: var(--clr-text);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+  box-sizing: border-box; margin-bottom: 1.5rem; transition: all 0.2s ease-out;
 }
+.barra-busqueda::placeholder { color: var(--clr-text-secondary); opacity: 0.7; }
 .barra-busqueda:focus {
   outline: none;
-  border-color: var(--color-grana);
-  box-shadow: 0 0 0 2px var(--color-grana);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light),
+              0 0 0 4px var(--clr-primary-shadow); /* Resplandor Dinámico */
 }
 
 .etiqueta {
-  background-color: var(--color-maiz);
-  color: var(--color-maiz-texto);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  text-transform: capitalize;
+  background-color: var(--clr-bg); color: var(--clr-text-secondary);
+  font-size: 0.8rem; font-weight: 600; padding: 0.4rem 1rem;
+  border-radius: 20px; text-transform: capitalize; border: none;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
 }
-
-.etiqueta-contenedor {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
+.etiqueta[role="button"], .etiqueta:not(span) { cursor: pointer; transition: all 0.15s ease-out; }
+.etiqueta[role="button"]:hover, .etiqueta:not(span):hover {
+  transform: translateY(-2px);
+  color: var(--clr-primary); /* Texto Primario Dinámico */
+  /* Sombras hover específicas por modo */
+  box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px var(--clr-highlight); /* Claro */
 }
+.etiqueta-activa {
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light) !important; /* INSET */
+  color: var(--clr-primary) !important; /* Texto Primario Dinámico */
+  background-color: var(--clr-bg) !important;
+  font-weight: 700; transform: translateY(0) !important;
+}
+.etiqueta-contenedor { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; margin-bottom: 2.5rem; padding-left: 5px; }
 
+/* Botón Principal (Gradiente Vibrante Primario Dinámico) */
 .btn-principal {
-  display: inline-block;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 1.1rem;
-  background-color: var(--color-grana);
-  color: var(--color-blanco);
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  margin-top: 2rem;
-  margin-right: 1rem;
+  display: inline-block; font-family: var(--font-sans); font-weight: 700; font-size: 1.1rem;
+  background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker));
+  color: var(--clr-white); /* Texto Blanco/Claro */
+  padding: 0.9rem 2.5rem; border-radius: 25px; text-decoration: none;
+  margin-top: 2rem; margin-right: 1rem; border: none; cursor: pointer;
+  box-shadow: 0 5px 15px var(--clr-primary-shadow);
   transition: all 0.2s ease-out;
 }
 .btn-principal:hover {
-  background-color: #991b1b; /* Rojo más oscuro (Red 800) */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--clr-primary-shadow);
+  filter: brightness(1.05);
+}
+.btn-principal:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px var(--clr-primary-shadow);
+  filter: brightness(0.95);
+}
+/* Botón Secundario (Neomorfista Base, color Terciario Dinámico) */
+.btn-secundario {
+  display: inline-block; font-family: var(--font-sans); font-weight: 700; font-size: 1.1rem;
+  background: var(--clr-bg);
+  color: var(--clr-tertiary); /* Color Terciario Dinámico */
+  padding: 0.9rem 2.5rem; border-radius: 25px; text-decoration: none;
+  margin-top: 2rem; margin-right: 1rem; border: none; cursor: pointer;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+  transition: all 0.2s ease-out;
+}
+.btn-secundario:hover {
+  transform: translateY(-3px);
+  color: var(--clr-tertiary-darker);
+  /* Sombras hover específicas por modo */
+  box-shadow: 7px 7px 14px #c8c8c8, -7px -7px 14px var(--clr-highlight); /* Claro */
+}
+.btn-secundario:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); /* INSET */
+  color: var(--clr-tertiary);
 }
 
-/* --- 5. Estilos de Página (Diccionario e Inicio) --- */
-.tarjetas-contenedor {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-}
+/* --- 5. Estilos de Página --- */
+.tarjetas-contenedor { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2.5rem; }
 
-/* REGLA UNIFICADA PARA .tarjeta-palabra */
-.tarjeta-palabra {
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
-  padding: 1.25rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  
-  /* Animación de entrada */
-  animation: fadeIn 0.4s ease-out forwards; 
-  
-  /* Animación de hover */
-  transition: all 0.2s ease-out; 
+.tarjeta-palabra, .tarjeta-inicio {
+  background-color: var(--clr-card-bg); border: none; padding: 1.5rem; border-radius: 15px;
+  box-shadow: var(--shadow-dark), var(--shadow-light); animation: fadeIn 0.4s ease-out forwards;
+  transition: all 0.2s ease-out; overflow: hidden;
 }
-
-/* Tarjeta de la HomePage */
-.tarjeta-inicio {
-  animation: fadeIn 0.5s ease-out forwards;
-}
-
-/* Estado :hover para la tarjeta */
 .tarjeta-palabra:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
+  /* Sombras hover específicas por modo */
+  box-shadow: 9px 9px 18px #c8c8c8, -9px -9px 18px var(--clr-highlight); /* Claro */
 }
+/* **PALABRA DEL DÍA (CORREGIDO CONTRASTE v11)** */
+.tarjeta-palabra-dia {
+  background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker));
+  color: var(--clr-white); /* Texto Blanco SIEMPRE */
+  border: none; padding: 1.5rem; border-radius: 15px;
+  margin: 1rem 0 3rem 0; text-align: center;
+  box-shadow: 0 8px 20px var(--clr-primary-shadow);
+  transition: all 0.2s ease-out;
+}
+.tarjeta-palabra-dia:hover { transform: translateY(-4px); box-shadow: 0 12px 25px var(--clr-primary-shadow); }
+.tarjeta-palabra-dia h3 { color: var(--clr-white); opacity: 0.8; font-size: 1.1rem; margin-bottom: 0.2rem;}
+.tarjeta-palabra-dia h2 { color: var(--clr-white); font-size: 2.5rem; margin: 0.2rem 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); }
+.tarjeta-palabra-dia p { color: var(--clr-white); font-size: 1.2rem; margin-top: 0.4rem; }
 
-.tarjeta-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+.tarjeta-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem; }
 
 .titulo-letra {
-  font-size: 3rem; 
-  color: var(--color-grana);
-  grid-column: 1 / -1; /* Ocupa toda la fila del grid */
-  margin-top: 1.5rem;
-  border-bottom: 2px solid var(--color-borde);
-  padding-bottom: 0.5rem;
+  font-family: var(--font-serif); font-size: 2.5rem; color: var(--clr-primary); /* Primario */
+  grid-column: 1 / -1; margin-top: 2rem;
+  border-bottom: 2px solid var(--clr-border-sutil); border-image: none;
+  padding-bottom: 0.5rem; margin-bottom: 1.5rem; text-align: left; padding-left: 0.5rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .palabra-nahuatl {
-  font-family: var(--font-serif);
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--color-texto);
+  font-family: var(--font-serif); font-size: 2rem; font-weight: 700;
+  color: var(--clr-primary); /* Primario */
+  margin-bottom: 0.2rem; line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
-.palabra-espanol {
-  font-size: 1.25rem;
-  color: #57534e; /* Stone 600 */
-  margin-bottom: 0.75rem;
+.palabra-espanol { font-size: 1.1rem; color: var(--clr-text); margin-bottom: 0.75rem; }
+.palabra-raiz { font-size: 0.85rem; color: var(--clr-text-secondary); margin: -0.5rem 0 1rem 0; }
+.raiz-texto { font-weight: 600; font-style: italic; color: var(--clr-text); }
+.reproductor-audio { height: 30px; max-width: 100%; width: 100%; margin-top: 0.5rem; }
+.ejemplo-contenedor { border-top: 1px solid var(--clr-border-sutil); /* ... resto sin cambios ... */ }
+.ejemplo-texto { color: var(--clr-text-secondary); /* ... resto sin cambios ... */ }
+.titulo-seccion { color: var(--clr-primary); border-bottom-color: var(--clr-border-sutil); }
+.morfema-item { border-bottom-color: var(--clr-border-sutil); }
+.morfema-forma { color: var(--clr-primary); }
+.morfema-significado { color: var(--clr-text-secondary); }
+.mensaje-error { color: var(--clr-intenso); background-color: #fde8f4; border: 1px solid var(--clr-intenso); }
+
+/* --- 6. Utilidades --- */
+.spinner-carga { border-color: var(--clr-primary); /* ... resto sin cambios ... */ }
+.mensaje-no-resultados { color: var(--clr-text-secondary); /* ... resto sin cambios ... */ }
+
+/* --- 7. Keyframes --- */
+@keyframes spin { /* ... sin cambios ... */ }
+@keyframes fadeIn { /* ... sin cambios ... */ }
+
+/* --- 8. MODO OSCURO (Frío/Acuoso: Turquesa Primario v11) --- */
+.dark:root {
+  /* Base Oscura (Gris Neutro Oscuro) */
+  --clr-bg: #2d2d2d;
+  --clr-text: #e0e1ec;
+  --clr-text-secondary: #a8b0b6;
+  --clr-card-bg: var(--clr-bg);
+  --clr-highlight: #3a3a3a; /* Luz oscura */
+  --clr-shadow: #1f1f1f;   /* Sombra oscura */
+  --clr-border-sutil: #4a4a4a;
+
+  /* Acentos Oscuros (Turquesa Primario) */
+  --clr-primary: #0fc0ac;      /* TURQUESA Logo */
+  --clr-primary-darker: #0D9E90;
+  --clr-primary-shadow: rgba(15, 192, 172, 0.15); /* Sombra turquesa suave */
+  --clr-secondary: #f3b124;    /* Amarillo Logo */
+  --clr-secondary-text: #5c4505;
+  --clr-tertiary: #81B29A;      /* Verde Musgo Claro */
+  --clr-tertiary-darker: #6AA081;
+
+  /* Sombras Neomorfismo Oscuro (Neutro) */
+  --shadow-light: -4px -4px 8px var(--clr-highlight);
+  --shadow-dark: 4px 4px 8px var(--clr-shadow);
+  --shadow-inset-light: inset -2px -2px 5px var(--clr-highlight);
+  --shadow-inset-dark: inset 2px 2px 5px var(--clr-shadow);
 }
 
-.palabra-raiz {
-  font-size: 0.9rem; /* Un poco más pequeño */
-  color: #a8a29e; /* Color gris claro (Stone 400) */
-  margin-top: -0.5rem; /* Acércalo a la traducción */
-  margin-bottom: 0.75rem;
+/* Ajustes generales modo oscuro */
+.dark body { color: var(--clr-text); background-color: var(--clr-bg); }
+.dark .subtitulo,
+.dark .palabra-espanol,
+.dark .palabra-raiz,
+.dark .raiz-texto,
+.dark .ejemplo-texto,
+.dark .mensaje-no-resultados,
+.dark .morfema-significado {
+    color: var(--clr-text-secondary);
+}
+.dark .palabra-espanol { color: var(--clr-text); }
+.dark .raiz-texto { color: var(--clr-text); }
+
+/* Elementos interactivos modo oscuro */
+.dark .barra-busqueda {
+    background-color: var(--clr-bg); border: none; color: var(--clr-text);
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+}
+.dark .barra-busqueda::placeholder { color: #777a88; }
+.dark .barra-busqueda:focus {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light),
+                0 0 0 3px var(--clr-primary-shadow); /* Resplandor Turquesa */
 }
 
-.raiz-texto {
-  font-weight: 600; /* Negrita */
-  font-style: italic;
-  color: #78716c; /* Gris más oscuro (Stone 500) */
+.dark .etiqueta {
+    background-color: var(--clr-bg);
+    color: var(--clr-secondary); /* Amarillo */
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .etiqueta[role="button"]:hover,
+.dark .etiqueta:not(span):hover {
+    color: var(--clr-primary); /* Turquesa */
+    box-shadow: 6px 6px 12px var(--clr-shadow), -6px -6px 12px var(--clr-highlight);
+}
+.dark .etiqueta-activa {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light) !important;
+    color: var(--clr-primary) !important; /* Turquesa */
 }
 
-.reproductor-audio {
-  height: 32px;
-  max-width: 200px;
-  width: 100%;
+.dark .btn-principal {
+    background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker)); /* Gradiente Turquesa */
+    color: #1a1a1a; /* Texto casi negro para contraste */
+    box-shadow: 0 5px 15px var(--clr-primary-shadow);
+}
+.dark .btn-principal:hover {
+    box-shadow: 0 8px 20px var(--clr-primary-shadow);
+    filter: brightness(1.1); transform: translateY(-3px);
+}
+.dark .btn-principal:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
 }
 
-.ejemplo-contenedor {
-  border-top: 1px solid var(--color-borde);
-  padding-top: 0.75rem;
-  margin-top: 1rem;
+.dark .btn-secundario {
+    background: var(--clr-bg);
+    color: var(--clr-tertiary); /* Verde Musgo */
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .btn-secundario:hover {
+    color: var(--clr-tertiary); /* Mantiene color */
+    box-shadow: 7px 7px 14px var(--clr-shadow), -7px -7px 14px var(--clr-highlight);
+}
+.dark .btn-secundario:active { 
+  transform: translateY(0);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+ }
+
+/* Tarjetas Modo Oscuro */
+.dark .tarjeta-palabra, .dark .tarjeta-inicio {
+    background-color: var(--clr-card-bg); border: none;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .tarjeta-palabra:hover {
+    box-shadow: 8px 8px 16px var(--clr-shadow), -8px -8px 16px var(--clr-highlight);
+}
+/* Palabra del Día Modo Oscuro */
+.dark .tarjeta-palabra-dia {
+    background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker)); /* Gradiente Turquesa */
+    color: #113a6f; /* Texto Azul muy oscuro */
+    box-shadow: 0 8px 20px var(--clr-primary-shadow);
+    border: none; border-image: none;
+}
+.dark .tarjeta-palabra-dia h3 { color: rgba(17, 58, 111, 0.85); }
+.dark .tarjeta-palabra-dia h2 { color: #113a6f; text-shadow: none; }
+.dark .tarjeta-palabra-dia p { color: #113a6f; }
+
+.dark .titulo-letra {
+    /* Gradiente Turquesa a Amarillo */
+    border-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary)) 1;
 }
 
-.ejemplo-texto {
-  font-style: italic;
-  color: #78716c; /* Stone 500 */
-  margin: 0 0 0.5rem 0;
+.dark .palabra-nahuatl { color: var(--clr-primary); } /* Turquesa */
+
+/* Analizador Modo Oscuro */
+.dark .analizador-resultados { box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); }
+.dark .titulo-seccion { border-bottom-color: var(--clr-border-sutil); }
+.dark .morfema-item { border-bottom-color: var(--clr-border-sutil); }
+.dark .morfema-forma { color: var(--clr-primary); } /* Turquesa */
+
+/* Mensajes de error y alertas */
+.dark .mensaje-error {
+  background-color: rgba(255,107,107,0.08);
+  color: var(--clr-intense);
+  border: 1px solid rgba(255,107,107,0.18);
+  box-shadow: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
 }
 
-/* --- 6. Estilos de Navbar (de Navbar.css) --- */
-.nav-link {
+/* === ESTILOS ADICIONALES/AJUSTADOS PARA HOMEPAGE v11 === */
+
+.home-page-container {
+  padding-top: 2rem; /* Añadimos padding superior aquí */
+}
+
+/* --- Sección Hero --- */
+.hero-section {
+  text-align: center;
+  padding: 2rem 1rem 3rem 1rem; /* Ajuste de padding */
+  margin-bottom: 3rem;
+}
+
+.hero-logo {
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  max-width: 150px;
+  height: auto;
+  filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.1));
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 0.25rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out 0.4s forwards;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out 0.6s forwards;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--clr-text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out 0.8s forwards;
+}
+/* Estilo para el strong dentro de la descripción */
+.hero-description strong {
+    color: var(--clr-primary); /* Color primario */
+    font-weight: 700;
+    font-family: var(--font-serif); /* Fuente Serif si quieres enfatizar */
+}
+
+.hero-cta {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.8s ease-out 1s forwards;
+}
+.hero-cta .btn-principal {
+    padding: 1rem 2.8rem;
+    font-size: 1.15rem;
+}
+
+/* --- Sección Palabra del Día --- */
+.palabra-dia-section {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn 0.6s ease-out 1.2s forwards;
+}
+/* Estilos específicos para la tarjeta Palabra del Día */
+.tarjeta-palabra-dia {
+  background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker));
+  color: var(--clr-white);
+  border: none; padding: 1.5rem; border-radius: 15px;
+  margin: 1rem 0 3rem 0; text-align: center;
+  box-shadow: 0 8px 20px var(--clr-primary-shadow);
   transition: all 0.2s ease-out;
 }
-.nav-link:hover {
-  color: var(--color-grana);
-  transform: translateY(-2px);
+.tarjeta-palabra-dia:hover { transform: translateY(-4px); box-shadow: 0 12px 25px var(--clr-primary-shadow); }
+.tarjeta-palabra-dia h3 { color: var(--clr-white); opacity: 0.8; font-size: 1.1rem; margin-bottom: 0.2rem;}
+.tarjeta-palabra-dia h2 { color: var(--clr-white); font-size: 2.5rem; margin: 0.2rem 0; text-shadow: 1px 1px 3px rgba(0,0,0,0.2); font-family: var(--font-serif);}
+.tarjeta-palabra-dia p { color: var(--clr-white); font-size: 1.2rem; margin-top: 0.4rem; }
+/* Modo Oscuro Palabra del Día */
+.dark .tarjeta-palabra-dia {
+    background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker)); /* Gradiente Turquesa */
+    color: #113a6f; /* Texto Azul muy oscuro */
+    box-shadow: 0 8px 20px var(--clr-primary-shadow);
 }
+.dark .tarjeta-palabra-dia h3 { color: rgba(17, 58, 111, 0.85); }
+.dark .tarjeta-palabra-dia h2 { color: #113a6f; text-shadow: none; }
+.dark .tarjeta-palabra-dia p { color: #113a6f; }
 
-/* --- 7. Utilidades --- */
-.spinner-carga {
-  height: 4rem;
-  width: 4rem;
-  border-width: 8px;
-  border-style: dashed;
-  border-color: var(--color-grana);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin: 4rem auto;
-}
 
-.mensaje-no-resultados {
+/* --- Sección de Información --- */
+/* .tarjeta-inicio ya no existe, usamos .tarjeta-palabra */
+.info-section {
+  padding: 2.5rem;
   text-align: center;
-  color: #78716c; /* Stone 500 */
-  font-size: 1.125rem;
-  padding: 2.5rem 0;
-  /* Ocupa toda la fila del grid para que aparezca centrado */
-  grid-column: 1 / -1; 
+  margin-top: 3rem;
+  /* Hereda estilos base de .tarjeta-palabra */
 }
 
-/* --- 8. Definiciones de Keyframes (Animaciones) --- */
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info-section-title {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--clr-primary); /* Color primario */
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.info-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--clr-text-secondary);
+  max-width: 700px;
+  margin: 0 auto 1.5rem auto;
 }
 
-/* --- 9. MODO OSCURO --- */
-.dark:root {
-  --color-fondo: #1c1917;     /* Fondo (Stone 900) */
-  --color-texto: #e7e5e4;     /* Texto (Stone 200) */
-  --color-grana: #ef4444;     /* Rojo (Red 500) */
-  --color-maiz: #a16207;      /* Maíz (Amber 700) */
-  --color-maiz-texto: #fef3c7; /* Maíz Texto (Amber 100) */
-  --color-borde: #44403c;     /* Borde (Stone 700) */
-  --color-blanco: #292524;    /* Fondo de Tarjeta (Stone 800) */
+.link-sutil {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--clr-tertiary); /* Color terciario */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s ease-out;
+}
+.link-sutil:hover {
+  color: var(--clr-tertiary-darker);
+  text-decoration: underline;
+}
+.dark .link-sutil { color: var(--clr-tertiary); } /* Verde Musgo en oscuro */
+.dark .link-sutil:hover { color: var(--clr-tertiary-darker); }
+
+/* --- Ajustes finales --- */
+/* Aseguramos que strong tenga el estilo correcto */
+strong {
+    font-weight: 700; /* Asegura negrita */
 }
 
-.dark .barra-busqueda {
-  background-color: #44403c; /* Stone 700 */
-  border-color: #57534e; /* Stone 600 */
-  color: var(--color-texto);
-}
-.dark .barra-busqueda:focus {
-  background-color: var(--color-blanco);
+/* === ESTILOS PARA CONTROLES Y DROPDOWN v11 === */
+
+.controles-diccionario {
+  display: flex;
+  flex-wrap: wrap; /* Permite que pasen a la siguiente línea en móvil */
+  gap: 1rem; /* Espacio entre búsqueda y filtro */
+  margin-bottom: 2.5rem; /* Espacio antes del índice */
+  align-items: center; /* Alinea verticalmente */
 }
 
-/* .dark .navbar está en Navbar.css, pero si no, iría aquí */
-.dark .navbar {
-  background-color: var(--color-blanco);
-  border-bottom-color: var(--color-grana);
+.controles-diccionario .barra-busqueda {
+  flex-grow: 1; /* Ocupa el espacio disponible */
+  margin-bottom: 0; /* Quitamos margen inferior */
+  min-width: 250px; /* Ancho mínimo */
 }
 
-.dark .palabra-raiz {
-  color: #78716c; /* Stone 500 en oscuro */
+/* Contenedor para el select y la flecha */
+.filtro-categoria-wrapper {
+  position: relative;
+  min-width: 200px; /* Ancho mínimo del dropdown */
 }
-.dark .raiz-texto {
-  color: #a8a29e; /* Stone 400 en oscuro */
+
+/* Estilo Neomorfista para el Select */
+.category-select {
+  appearance: none; /* Quita estilo nativo */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.8rem 2.5rem 0.8rem 1rem; /* Espacio para texto y flecha */
+  border: none;
+  border-radius: 20px;
+  background-color: var(--clr-bg);
+  color: var(--clr-text-secondary);
+  box-shadow: var(--shadow-dark), var(--shadow-light); /* OUTSET */
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.category-select:hover {
+  color: var(--clr-primary);
+  box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px var(--clr-highlight);
+}
+
+.category-select:focus {
+  outline: none;
+  /* Resplandor suave */
+  box-shadow: var(--shadow-dark), var(--shadow-light),
+              0 0 0 3px var(--clr-primary-shadow);
+}
+
+/* Flecha personalizada */
+.select-arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  color: var(--clr-text-secondary);
+  pointer-events: none; /* Permite hacer clic "a través" de la flecha */
+}
+
+/* Modo oscuro para el Select */
+.dark .category-select {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-secondary);
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .category-select:hover {
+  color: var(--clr-primary); /* Turquesa */
+  box-shadow: 6px 6px 12px var(--clr-shadow), -6px -6px 12px var(--clr-highlight);
+}
+.dark .category-select:focus {
+  box-shadow: var(--shadow-dark), var(--shadow-light),
+              0 0 0 3px var(--clr-primary-shadow); /* Resplandor Turquesa */
+}
+.dark .select-arrow {
+  color: var(--clr-text-secondary);
+}
+
+/* --- Ajustes menores para Diccionario --- */
+.tarjeta-separador {
+  border: none;
+  height: 1px;
+  background-color: var(--clr-border-sutil);
+  margin: 0.8rem 0; /* Espacio vertical */
+}
+.dark .tarjeta-separador {
+  background-color: var(--clr-border-sutil);
+}
+
+/* Refinamos hover de tarjetas */
+.tarjeta-palabra:hover {
+  transform: translateY(-6px);
+  box-shadow: 9px 9px 18px #c8c8c8, -9px -9px 18px var(--clr-highlight); /* Claro */
+}
+.dark .tarjeta-palabra:hover {
+  box-shadow: 8px 8px 16px var(--clr-shadow), -8px -8px 16px var(--clr-highlight); /* Oscuro */
 }

@@ -1,77 +1,258 @@
+/* === Navbar Circular Neomorfista con Menú Hamburguesa === */
+
+/* Variables locales (pueden heredar de :root si prefieres) */
+:root {
+  --navbar-height: 60px; /* Altura base del Navbar */
+}
+
+/* Contenedor Exterior */
+.navbar-container {
+  padding: 0.75rem; /* Espacio reducido */
+  position: sticky;
+  top: 0.75rem; /* Lo separamos un poco de arriba */
+  z-index: 50;
+  /* Transición suave por si cambia el fondo con el tema */
+  transition: background-color 0.3s ease;
+}
+
+/* Píldora Principal */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--color-blanco);
-  padding: 1rem 2rem;
-  border-bottom: 2px solid var(--color-grana);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  /* Asegura que esté por encima de cualquier contenido si es necesario */
-  position: relative;
-  z-index: 10;
+  background-color: var(--clr-bg);
+  border-radius: 9999px;
+  padding: 0.5rem 1.5rem; /* Ajuste de padding */
+  box-shadow: var(--shadow-dark), var(--shadow-light); /* Neomorfismo */
+  max-width: 1100px;
+  height: var(--navbar-height);
+  margin: 0 auto;
+  transition: all 0.3s ease; /* Transición general */
 }
 
+/* Logo */
 .nav-logo {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-grana);
+  color: var(--clr-primary);
   text-decoration: none;
+  transition: transform 0.2s ease-out;
+  flex-shrink: 0; /* Evita que se encoja */
 }
+.nav-logo:hover { transform: scale(1.05); }
 
+/* Contenedor de Enlaces de Escritorio */
 .nav-links {
-  display: flex;
-  gap: 1.5rem;
+  display: flex; /* Visible por defecto */
+  align-items: center;
+  gap: 0.5rem;
 }
 
+/* Enlaces Individuales (Escritorio) */
 .nav-link {
   font-family: var(--font-sans);
-  font-weight: 700;
-  color: var(--color-texto);
+  font-weight: 600;
+  color: var(--clr-text-secondary);
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
-}
-
-.nav-link:hover {
-  color: var(--color-grana);
-}
-
-/* Estilos para pantallas pequeñas (móvil) */
-@media (max-width: 640px) {
-  .navbar {
-    flex-direction: column;
-    padding: 1rem;
-    gap: 0.5rem;
-  }
-  .nav-links {
-    gap: 1rem;
-    font-size: 0.9rem;
-  }
-  .nav-logo {
-    font-size: 1.5rem;
-  }
-}
-
-/* --- Estilos para el botón de Tema --- */
-.theme-toggle-button {
-  background-color: transparent;
+  font-size: 0.9rem; /* Ligeramente más pequeños */
+  transition: all 0.2s ease-out;
+  padding: 0.4rem 0.8rem; /* Padding ajustado */
+  border-radius: 9999px;
+  position: relative;
   border: none;
-  cursor: pointer;
-  /* Hereda el color del texto del navbar */
-  color: var(--color-texto); 
-  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+.nav-link:hover {
+  color: var(--clr-primary);
+  background-color: rgba(128, 128, 128, 0.05);
+  transform: translateY(-1px);
+}
+.nav-link.active { /* Estado Activo Neomorfista INSET */
+    color: var(--clr-primary);
+    background-color: var(--clr-bg);
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+    font-weight: 700;
+    transform: translateY(0);
+}
+
+/* Contenedor de Controles (Tema y Hamburguesa) */
+.navbar-controls {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.75rem; /* Espacio entre toggle y hamburguesa */
 }
 
+/* Botón de Tema (Estilos base neomorfistas) */
+.theme-toggle-button {
+  background-color: var(--clr-bg);
+  border: none; cursor: pointer; color: var(--clr-text-secondary);
+  padding: 0.6rem; display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; transition: all 0.2s ease-out;
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+}
 .theme-toggle-button:hover {
-  color: var(--color-grana);
+  color: var(--clr-primary); transform: scale(1.1);
+  box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px var(--clr-highlight);
+}
+.theme-toggle-button:active {
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+  transform: scale(0.95); color: var(--clr-primary);
+}
+.theme-toggle-button svg { width: 18px; height: 18px; }
+
+/* === Menú Hamburguesa === */
+
+.menu-toggle {
+  display: none; /* Oculto por defecto en escritorio */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background-color: var(--clr-bg);
+  border: none;
+  border-radius: 50%; /* Circular */
+  padding: 6px; /* Espacio interno */
+  cursor: pointer;
+  box-shadow: var(--shadow-dark), var(--shadow-light); /* Neomorfismo */
+  transition: all 0.3s ease-out;
+  z-index: 60; /* Encima del navbar */
+}
+.menu-toggle:hover {
+    box-shadow: 6px 6px 12px #c8c8c8, -6px -6px 12px var(--clr-highlight);
+}
+.menu-toggle:active {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
 }
 
-.theme-toggle-button svg {
-  /* Asegura que los iconos no se deformen */
-  width: 20px;
-  height: 20px;
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--clr-text-secondary);
+  border-radius: 2px;
+  transition: all 0.3s ease-out;
 }
+
+/* Animación de la hamburguesa a 'X' */
+.menu-toggle.active .line-1 {
+  transform: rotate(45deg) translate(4px, 4px);
+  background-color: var(--clr-primary);
+}
+.menu-toggle.active .line-2 {
+  opacity: 0;
+}
+.menu-toggle.active .line-3 {
+  transform: rotate(-45deg) translate(4px, -4px);
+   background-color: var(--clr-primary);
+}
+
+/* Contenedor del Menú Móvil (Desplegable) */
+.nav-links-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--clr-bg);
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: var(--shadow-dark), var(--shadow-light); /* Neomorfismo */
+  padding: 1rem;
+  position: absolute; /* Posicionado relativo al navbar-container */
+  top: calc(var(--navbar-height) + 1.5rem); /* Debajo del navbar */
+  left: 1rem;
+  right: 1rem;
+  max-width: 400px; /* Ancho máximo */
+  margin: 0 auto; /* Centrado */
+  /* Oculto por defecto, anima la visibilidad y posición */
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  transition: all 0.3s ease-out;
+  z-index: 40; /* Debajo del botón hamburguesa */
+}
+
+.nav-links-mobile.open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Enlaces dentro del menú móvil */
+.nav-link-mobile {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  color: var(--clr-text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem; /* Más grandes para tocar fácil */
+  padding: 0.75rem 1.5rem; /* Padding generoso */
+  border-radius: 9999px;
+  width: 100%; /* Ocupa todo el ancho */
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+.nav-link-mobile:hover {
+  color: var(--clr-primary);
+  background-color: rgba(128, 128, 128, 0.05);
+}
+.nav-link-mobile.active { /* Estado activo sutil */
+    color: var(--clr-primary);
+    font-weight: 700;
+    /* Podríamos añadir un fondo inset sutil si quisiéramos */
+    /* box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); */
+}
+
+
+/* === Modo Oscuro === */
+.dark .navbar {
+  background-color: var(--clr-bg);
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .nav-logo { color: var(--clr-primary); } /* Amarillo */
+.dark .nav-link { color: var(--clr-text-secondary); }
+.dark .nav-link:hover { color: var(--clr-primary); background-color: rgba(200, 200, 200, 0.05); }
+.dark .nav-link.active {
+    color: var(--clr-primary); /* Amarillo */
+    background-color: var(--clr-bg);
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+}
+.dark .theme-toggle-button {
+    color: var(--clr-text-secondary); background-color: var(--clr-bg);
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .theme-toggle-button:hover {
+    color: var(--clr-primary); /* Amarillo */
+    box-shadow: 6px 6px 12px var(--clr-border-dark), -6px -6px 12px var(--clr-highlight);
+}
+.dark .theme-toggle-button:active {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); color: var(--clr-primary);
+}
+/* Modo oscuro hamburguesa */
+.dark .menu-toggle { background-color: var(--clr-bg); box-shadow: var(--shadow-dark), var(--shadow-light); }
+.dark .hamburger-line { background-color: var(--clr-text-secondary); }
+.dark .menu-toggle.active .hamburger-line { background-color: var(--clr-primary); } /* Amarillo */
+.dark .menu-toggle:hover { box-shadow: 6px 6px 12px var(--clr-border-dark), -6px -6px 12px var(--clr-highlight); }
+.dark .menu-toggle:active { box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); }
+/* Modo oscuro menú desplegable */
+.dark .nav-links-mobile { background-color: var(--clr-bg); box-shadow: var(--shadow-dark), var(--shadow-light); }
+.dark .nav-link-mobile { color: var(--clr-text-secondary); }
+.dark .nav-link-mobile:hover { color: var(--clr-primary); background-color: rgba(200, 200, 200, 0.05); }
+.dark .nav-link-mobile.active { color: var(--clr-primary); }
+
+
+/* === Responsividad === */
+@media (max-width: 768px) {
+  .nav-links.desktop-links {
+    display: none; /* Oculta los links de escritorio */
+  }
+  .menu-toggle {
+    display: flex; /* Muestra el botón de hamburguesa */
+  }
+  .navbar {
+      justify-content: space-between; /* Asegura espacio entre logo y controles */
+      padding: 0.5rem 1rem; /* Ajusta padding */
+  }
+  .navbar-controls {
+      gap: 0.5rem; /* Reduce espacio entre toggles */
+  }
+}
+

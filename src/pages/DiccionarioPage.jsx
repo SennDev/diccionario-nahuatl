@@ -1,18 +1,20 @@
-import React, { useState, useMemo } from 'react' 
-import allWords from '../data/words.json' 
+import React, { useState, useMemo } from 'react';
+import allWords from '../data/words.json';
 
-// --- Componentes ---
+// --- Componentes Auxiliares ---
+
+// (AudioPlayer y CategoryTags - sin cambios funcionales)
 function AudioPlayer({ url }) {
-  if (!url) return null
+  if (!url) return null;
   return (
     <audio controls className="reproductor-audio">
       <source src={url} type="audio/mpeg" />
       Tu navegador no soporta el audio.
     </audio>
-  )
+  );
 }
 function CategoryTags({ categoriaStr }) {
-  if (!categoriaStr) return null
+  if (!categoriaStr) return null;
   const tags = categoriaStr.split(',').map(tag => tag.trim()).filter(tag => tag);
   return (
     <div className="etiqueta-contenedor">
@@ -22,208 +24,188 @@ function CategoryTags({ categoriaStr }) {
         </span>
       ))}
     </div>
-  )
+  );
 }
 
-
-// El alfabeto náhuatl relevante
-const ALFABETO = "ACHEIKLMNOPSTWXY".split('');
-
+// (PalabraDelDia - extraído del componente principal)
 function PalabraDelDia({ words }) {
-  // Elige una palabra al azar (basado en el día del año)
+  if (!words || words.length === 0) return null;
   const diaDelAnio = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 1000 / 60 / 60 / 24);
-  // Nos aseguramos de que solo elija de palabras que NO sean morfemas
-  const palabrasReales = words.filter(w => !w.palabranahuatl.startsWith('-'));
+  const palabrasReales = words.filter(w => w.palabranahuatl && !w.palabranahuatl.startsWith('-'));
+  if (palabrasReales.length === 0) return null;
   const palabra = palabrasReales[diaDelAnio % palabrasReales.length];
 
   return (
-    <div className='tarjeta-palabra' style={{
-      backgroundColor: 'var(--color-grana)', 
-      color: 'var(--color-fondo)', 
-      margin: '1rem 0 2rem 0',
-      // Aplicamos el modo oscuro al revés
-      borderColor: 'var(--color-grana)'
-    }}>
-      <h3 style={{fontFamily: 'var(--font-serif)', fontSize: '1.25rem', margin: 0, opacity: 0.8}}>Palabra del Día</h3>
-      <h2 style={{fontFamily: 'var(--font-serif)', fontSize: '2.5rem', margin: '0.5rem 0'}}>{palabra.palabranahuatl}</h2>
-      <p style={{fontSize: '1.25rem', margin: 0, opacity: 0.9}}>{palabra.traduccionespanol}</p>
+    <div className='tarjeta-palabra-dia'> {/* Usa la clase CSS dedicada */}
+      <h3>Palabra del Día</h3>
+      <h2>{palabra.palabranahuatl}</h2>
+      <p>{palabra.traduccionespanol}</p>
     </div>
-  )
+  );
 }
 
+// (IndiceAlfabetico - extraído del componente principal)
+const ALFABETO = "ACHEIKLMNOPSTWXY#?".split(''); // Incluye # y ?
 function IndiceAlfabetico({ letras }) {
   return (
-    <div style={{
-      display: 'flex', 
-      flexWrap: 'wrap', 
-      justifyContent: 'center', 
-      gap: '0.5rem', 
-      marginBottom: '2rem'
-    }}>
+    <div className="indice-alfabetico-contenedor"> {/* Clase CSS dedicada */}
       {letras.map(letra => (
-        <a 
-          key={letra} 
-          href={`#letra-${letra}`} // Esto hace que la página "salte"
+        <a
+          key={letra}
+          href={`#letra-${letra}`}
           onClick={(e) => {
-            e.preventDefault(); // Evita el salto brusco
+            e.preventDefault();
             document.getElementById(`letra-${letra}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }}
-          className="etiqueta" 
-          style={{cursor: 'pointer', fontSize: '1rem'}}
+          className="etiqueta indice-letra" /* Clase CSS dedicada */
         >
           {letra}
         </a>
       ))}
     </div>
-  )
+  );
 }
 
-// --- 3. COMPONENTE DE LA PÁGINA  ---
+// --- Componente Principal de la Página ---
 
-function DiccionarioPage() { 
-  // Estados (mucho más simple)
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState(null)
-  
-  // Lógica de Categorías (sin cambios, usa 'allWords' directamente)
+function DiccionarioPage() {
+  // Estados
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState(null); // null significa "todas"
+
+  // Lógica de Categorías (calcula las opciones para el dropdown)
   const categories = useMemo(() => {
-    const allCategories = allWords.flatMap(word => 
+    const allCategories = allWords.flatMap(word =>
       word.categoria ? word.categoria.split(',').map(tag => tag.trim()) : []
     );
-    return [...new Set(allCategories)].filter(cat => cat).sort();
-  }, [allWords])
+    return [...new Set(allCategories)].filter(cat => cat && !cat.includes('morfema')).sort(); // Excluimos 'morfema' aquí si no queremos filtrarlo
+  }, [allWords]);
 
 
-  // Lógica de Filtrado
+  // Lógica de Filtrado (combina búsqueda y categoría seleccionada)
   const filteredWords = useMemo(() => {
-    const query = searchQuery.toLowerCase().trim()
+    const query = searchQuery.toLowerCase().trim();
     return allWords.filter(word => {
+      // Filtro por Categoría
       if (selectedCategory) {
-        if (!word.categoria || !word.categoria.toLowerCase().includes(selectedCategory.toLowerCase())) {
+        if (!word.categoria || !word.categoria.toLowerCase().split(',').map(t => t.trim()).includes(selectedCategory.toLowerCase())) {
           return false;
         }
       }
+      // Filtro por Búsqueda (si no hay query, todo pasa)
       if (query === '') return true;
-      const nahuatlMatch = word.palabranahuatl.toLowerCase().includes(query)
-      const espanolMatch = word.traduccionespanol.toLowerCase().includes(query)
-      const categoriaMatch = word.categoria ? word.categoria.toLowerCase().includes(query) : false
-      return nahuatlMatch || espanolMatch || categoriaMatch
+
+      const nahuatlMatch = word.palabranahuatl.toLowerCase().includes(query);
+      const espanolMatch = word.traduccionespanol.toLowerCase().includes(query);
+      // Opcional: buscar también en categoría con el input de texto?
+      // const categoriaMatch = word.categoria ? word.categoria.toLowerCase().includes(query) : false
+      // return nahuatlMatch || espanolMatch || categoriaMatch
+      return nahuatlMatch || espanolMatch; // Buscamos solo en palabra y traducción
     });
-  }, [allWords, searchQuery, selectedCategory])
-  
-  // --- 4. AGRUPACIÓN POR LETRA ---
+  }, [allWords, searchQuery, selectedCategory]);
+
+  // Lógica de Agrupación por Letra (para el índice)
   const palabrasAgrupadas = useMemo(() => {
     return filteredWords.reduce((acc, word) => {
-      // Obtiene la primera letra (y la normaliza, ej: Ā -> A)
-      let primeraLetra = word.palabranahuatl[0].toUpperCase()
-          .normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Quita acentos
-      
-      if (primeraLetra === '-') primeraLetra = '#'; // Agrupa los morfemas
-      if (!ALFABETO.includes(primeraLetra)) primeraLetra = '?'; // Otros
+      let primeraLetra = word.palabranahuatl[0].toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (primeraLetra === '-') primeraLetra = '#';
+      else if (!ALFABETO.includes(primeraLetra)) primeraLetra = '?';
 
-      if (!acc[primeraLetra]) {
-        acc[primeraLetra] = []; // Crea el grupo si no existe
-      }
+      if (!acc[primeraLetra]) acc[primeraLetra] = [];
       acc[primeraLetra].push(word);
       return acc;
-    }, {}); // El 'acc' (acumulador) es un objeto
+    }, {});
   }, [filteredWords]);
 
-  // Saca las letras de los grupos Y del alfabeto, y las ordena
-  const letrasPresentes = [...new Set(Object.keys(palabrasAgrupadas), ALFABETO)].sort();
+  const letrasPresentes = useMemo(() => Object.keys(palabrasAgrupadas).sort((a, b) => {
+    // Orden personalizado: Letras -> # -> ?
+    if (a === '#') return 1; if (b === '#') return -1;
+    if (a === '?') return 1; if (b === '?') return -1;
+    return a.localeCompare(b);
+  }), [palabrasAgrupadas]);
 
 
-  // --- 5. JSX ---
+  // --- JSX de la Página ---
   return (
-    <div className="contenedor-principal">
-      
-      {/* ¡NUEVA PALABRA DEL DÍA! */}
+    <div className="contenedor-principal diccionario-page-container"> {/* Clase específica */}
+
+      {/* Palabra del Día */}
       <PalabraDelDia words={allWords} />
 
+      {/* Header */}
       <header className="header">
         <h1 className="titulo-principal">Diccionario Vivo</h1>
         <p className="subtitulo">Náhuatl de la Huasteca</p>
       </header>
 
-      {/* Barra de Búsqueda */}
-      <div style={{ marginBottom: '1rem' }}>
-        <input 
-          type="text" 
+      {/* --- Controles de Búsqueda y Filtro --- */}
+      <div className="controles-diccionario">
+        <input
+          type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Buscar palabra, traducción o categoría..."
+          placeholder="Buscar palabra o traducción..."
           className="barra-busqueda"
         />
-      </div>
 
-      {/* Filtros de Categoría */}
-      <div className="etiqueta-contenedor" style={{ marginBottom: '2rem', paddingLeft: '5px' }}>
-        {/* ... (Tu botón "Todas" y el .map de 'categories' va aquí sin cambios) ... */}
-        <button 
-          onClick={() => setSelectedCategory(null)} 
-          className="etiqueta"
-          style={{
-            cursor: 'pointer',
-            backgroundColor: selectedCategory === null ? 'var(--color-grana)' : 'var(--color-borde)',
-            color: selectedCategory === null ? 'var(--color-blanco)' : 'var(--color-texto)',
-          }}
-        >
-          Todas
-        </button>
-        {categories.map(category => (
-          <button 
-            key={category} 
-            onClick={() => setSelectedCategory(category)}
-            className="etiqueta"
-            style={{
-              cursor: 'pointer',
-              backgroundColor: selectedCategory === category ? 'var(--color-grana)' : 'var(--color-borde)',
-              color: selectedCategory === category ? 'var(--color-blanco)' : 'var(--color-texto)',
-            }}
+        {/* --- NUEVO: Menú Desplegable de Categorías --- */}
+        <div className="filtro-categoria-wrapper">
+          <select
+            className="category-select"
+            value={selectedCategory || ''}
+            onChange={(e) => setSelectedCategory(e.target.value || null)}
+            aria-label="Filtrar por categoría"
           >
-            {category}
-          </button>
-        ))}
+            <option value="">-- Todas las Categorías --</option>
+            {categories.map(category => (
+              <option key={category} value={category}>
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </option>
+            ))}
+          </select>
+          <span className="select-arrow" aria-hidden="true">▼</span>
+        </div>
       </div>
 
-      {/* ¡NUEVO ÍNDICE ALFABÉTICO! */}
+      {/* Índice Alfabético */}
       <IndiceAlfabetico letras={letrasPresentes} />
 
       <main>
-        {/* --- 6. RENDERIZADO POR GRUPOS --- */}
-        {/* Mapeamos las letras ordenadas */}
+        {/* Renderizado por Grupos */}
         {letrasPresentes.map(letra => (
-          // Comprobamos si hay palabras en ese grupo (después de filtrar por búsqueda/categoría)
+          // Solo renderiza la sección si hay palabras para esa letra DESPUÉS de filtrar
           palabrasAgrupadas[letra] && palabrasAgrupadas[letra].length > 0 && (
-            // Creamos un "fragmento" por cada letra
             <React.Fragment key={letra}>
-              
-              {/* El título de la sección, ej: "A" */}
-              <h2 
-                id={`letra-${letra}`} 
-                className="titulo-principal titulo-letra"
-              >
-                {letra}
+              <h2 id={`letra-${letra}`} className="titulo-principal titulo-letra">
+                {letra === '#' ? 'Morfemas' : letra === '?' ? 'Otros' : letra} {/* Muestra "Morfemas" */}
               </h2>
-
-              {/* Contenedor de Grid para las palabras de esta letra */}
               <div className="tarjetas-contenedor">
                 {palabrasAgrupadas[letra].map((word) => (
+                  // --- TARJETA DE PALABRA REFINADA ---
                   <div key={word.palabranahuatl} className="tarjeta-palabra">
                     <div className="tarjeta-header">
+                      {/* Palabra Nahuatl más grande */}
                       <h2 className="palabra-nahuatl">{word.palabranahuatl}</h2>
                       <AudioPlayer url={word.audiourl} />
                     </div>
-                    <p className="palabra-espanol">{word.traduccionespanol}</p> 
-                    {word.raiz && (
-                      <p className="palabra-raiz">
-                      Raíz: <span className="raiz-texto">{word.raiz}</span>
-                      </p>
-                    )}
-                    <CategoryTags categoriaStr={word.categoria} />
+                    {/* Separador */}
+                    <hr className="tarjeta-separador" />
+                    {/* Sección principal de info */}
+                    <div className="tarjeta-info">
+                        <p className="palabra-espanol">{word.traduccionespanol}</p>
+                        {word.raiz && (
+                          <p className="palabra-raiz">
+                            Raíz: <span className="raiz-texto">{word.raiz}</span>
+                          </p>
+                        )}
+                        {/* Mostramos etiquetas solo si no es un morfema (ya lo indica el #) */}
+                        {!word.palabranahuatl.startsWith('-') && <CategoryTags categoriaStr={word.categoria} />}
+                    </div>
+                    {/* Ejemplo (si existe) */}
                     {word.ejemplonahuatl && (
                       <div className="ejemplo-contenedor">
-                        <p className="ejemplo-texto">"{word.ejemplonahuatl}"</p>
+                        <p className="ejemplo-texto">Ejemplo:</p>
+                        <p className="ejemplo-frase">"{word.ejemplonahuatl}"</p>
                         <div style={{marginTop: '8px'}}><AudioPlayer url={word.audioejemplourl} /></div>
                       </div>
                     )}
@@ -233,15 +215,16 @@ function DiccionarioPage() {
             </React.Fragment>
           )
         ))}
-        
+
+        {/* Mensaje No Resultados (solo si no hay NINGUNA palabra después de filtrar) */}
         {filteredWords.length === 0 && (
-          <div className="mensaje-no-resultados">
-            <p>No se encontraron resultados para tu búsqueda.</p>
-          </div>
-        )}
+             <div className="mensaje-no-resultados">
+                 <p>No se encontraron resultados para tu búsqueda o filtro.</p>
+             </div>
+         )}
       </main>
     </div>
-  )
+  );
 }
 
-export default DiccionarioPage
+export default DiccionarioPage;
