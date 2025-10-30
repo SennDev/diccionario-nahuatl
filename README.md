@@ -1,7 +1,7 @@
 # 🏺 Nahuatl Vivo - Diccionario Interactivo (v.0.4 Pre-Alpha)
 
 <p align="center">
-  <img src="/logo-nv.png" alt="Logo Nahuatl Vivo - Tepetl, Xóchitl, Ollin" width="220"/>
+  <img src="public/logo_nv_icon.png" alt="Logo Nahuatl Vivo - Tepetl, Xóchitl, Ollin" width="220"/>
 </p>
 
 **Una plataforma web moderna y accesible para el aprendizaje y preservación del Náhuatl de la Huasteca.** ✨

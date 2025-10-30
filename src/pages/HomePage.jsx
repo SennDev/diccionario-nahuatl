@@ -29,7 +29,7 @@ function HomePage() {
 
       <header style={{ textAlign: 'center', marginBottom: '3rem' }}>
          <img
-            src="/Gemini_Generated_Image_98n6398n6398n639-removebg.jpg" // Asegúrate que el nombre coincida
+            src="public/logo_nv_icon.png" // Asegúrate que el nombre coincida
             alt="Logo Nahuatl Vivo"
             style={{ display: 'block', margin: '0 auto 1.5rem auto', maxWidth: '180px', height: 'auto', filter: 'drop-shadow(3px 3px 5px rgba(0,0,0,0.1))' }}
          />
