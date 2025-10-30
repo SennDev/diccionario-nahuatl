@@ -490,3 +490,112 @@ a:hover {
     min-width: 25px; /* Reduce ancho mínimo */
   }
 }
+
+/* ... (Tu CSS existente va aquí arriba) ... */
+
+/* === ESTILOS ADICIONALES PARA HISTORIAPAGE === */
+
+.historia-seccion {
+  margin-bottom: 3rem; /* Espacio entre secciones */
+  /* Clear floats para que las imágenes no interfieran con la siguiente sección */
+  overflow: hidden;
+}
+
+.historia-titulo {
+  font-size: 1.75rem !important; /* Sobreescribe tamaño de .palabra-nahuatl si es necesario */
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--clr-border-sutil);
+  padding-bottom: 0.5rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.dark .historia-titulo {
+  border-bottom-color: var(--clr-border-sutil);
+}
+
+
+.historia-imagen {
+  display: block; /* Asegura márgenes correctos */
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--clr-border-sutil);
+  border-radius: 8px; /* Bordes redondeados sutiles */
+  margin-top: 0.5rem;
+  opacity: 0.85; /* Ligera transparencia */
+  transition: opacity 0.3s ease, border-color 0.3s ease;
+}
+.dark .historia-imagen {
+  border-color: var(--clr-border-sutil);
+  opacity: 0.75;
+}
+
+/* Clases para flotar imágenes (opcional) */
+.historia-imagen-float-right {
+  float: right;
+  max-width: 200px; /* Ancho máximo para flotantes */
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.historia-imagen-float-left {
+  float: left;
+  max-width: 250px;
+  margin-right: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+/* Limpiar floats después de párrafos */
+.historia-seccion p:last-of-type {
+  clear: both;
+}
+
+
+/* Estilos para diferenciar los bloques de idioma */
+.texto-espanol {
+  margin-bottom: 1rem;
+  /* Podríamos añadir un borde izquierdo sutil si quisiéramos */
+  /* border-left: 3px solid var(--clr-tertiary); */
+  /* padding-left: 1rem; */
+}
+
+.texto-nahuatl {
+  font-style: italic;
+  color: var(--clr-text-secondary); /* Texto secundario para diferenciar */
+  border-left: 3px solid var(--clr-secondary); /* Borde amarillo */
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.dark .texto-nahuatl {
+  color: var(--clr-text-secondary);
+  border-left-color: var(--clr-secondary); /* Amarillo en oscuro */
+}
+
+
+.historia-titulo-fuente {
+  font-size: 1.5rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.lista-fuentes {
+  list-style-type: disc;
+  padding-left: 25px;
+  font-size: 0.95rem;
+  color: var(--clr-text-secondary);
+}
+.lista-fuentes li {
+  margin-bottom: 0.5rem;
+}
+.dark .lista-fuentes {
+   color: var(--clr-text-secondary);
+}
+
+
+/* Media Query para flotantes en móvil */
+@media (max-width: 640px) {
+  .historia-imagen-float-right,
+  .historia-imagen-float-left {
+    float: none; /* Desactiva flotación */
+    max-width: 80%; /* Ancho máximo centrado */
+    margin: 1rem auto; /* Centra la imagen */
+  }
+}
+
+/* --- FIN ESTILOS HISTORIAPAGE --- */
