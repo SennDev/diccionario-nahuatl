@@ -1,0 +1,21 @@
+/*
+ * ===========================================
+ * Archivo de Importación Principal
+ * Este archivo une todos los módulos de CSS.
+ * ===========================================
+ */
+
+/* 1. Base y Variables (Paleta, fuentes, reseteo) */
+@import "./base.css";
+
+/* 2. Layout (Estructura de página y contenedores) */
+@import "./layout.css";
+
+/* 3. Componentes (Botones, tarjetas, inputs, etc.) */
+@import "./components.css";
+
+/* 4. Utilidades (Animaciones, spinners, helpers) */
+@import "./utils.css";
+
+/* 5. Modo Oscuro (Sobreescribe todo lo anterior) */
+@import "./dark-mode.css";

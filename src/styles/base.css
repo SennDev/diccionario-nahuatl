@@ -1,0 +1,62 @@
+/* --- 1. Paleta Dinámica "Calor/Frío Consistente v11.1" --- */
+:root {
+  /* Fuentes */
+  --font-serif: 'Alegreya', serif;
+  --font-sans: 'Lato', sans-serif;
+
+  /* === MODO CLARO (Cálido: Rojos/Cobrizos) === */
+  /* Base Neomorfista */
+  --clr-bg: #f2f2f2;
+  --clr-text: #3a3a3c;
+  --clr-text-secondary: #78716c; /* Stone 500 */
+  --clr-card-bg: var(--clr-bg);
+  --clr-white: #ffffff;
+  --clr-highlight: #ffffff;
+  --clr-shadow: #d1d1d1;
+  --clr-border-sutil: #e0e0e0;
+
+  /* Acentos Vibrantes */
+  --clr-primary: #ed4e45;
+  --clr-primary-darker: #D6453D;
+  --clr-primary-shadow: rgba(237, 78, 69, 0.2);
+  --clr-secondary: #f3b124;
+  --clr-secondary-text: #5c4505;
+  --clr-tertiary: #B05A4F; /* Terracota */
+  --clr-tertiary-darker: #9A4C42;
+  --clr-intense: #c41f7b;
+  --clr-accent-cool: #0fc0ac; /* Turquesa (Usado en gradientes oscuros) */
+
+  /* Sombras Neomorfismo Claro (Refinadas v11.1) */
+  --shadow-light: -4px -4px 9px var(--clr-highlight);
+  --shadow-dark: 4px 4px 9px var(--clr-shadow);
+  --shadow-inset-light: inset -2px -2px 5px var(--clr-highlight);
+  --shadow-inset-dark: inset 2px 2px 5px var(--clr-shadow);
+  /* Sombra Hover más pronunciada */
+  --shadow-hover-light: -6px -6px 12px var(--clr-highlight);
+  --shadow-hover-dark: 6px 6px 12px #c8c8c8;
+}
+
+/* --- 2. Reseteo y Globales --- */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+/* Estilo base para links */
+a {
+  color: var(--clr-tertiary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(--clr-tertiary-darker);
+}
+/* Estilo base para strong */
+strong {
+  font-weight: 700;
+}

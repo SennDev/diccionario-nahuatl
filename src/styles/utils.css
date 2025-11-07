@@ -1,0 +1,56 @@
+/* --- 7. Utilidades (Spinners, Mensajes) --- */
+
+.spinner-carga {
+  height: 4rem; width: 4rem; border-width: 6px; border-style: dashed;
+  border-color: var(--clr-primary); border-radius: 50%;
+  animation: spin 1s linear infinite; margin: 4rem auto;
+}
+
+.mensaje-no-resultados {
+  text-align: center; color: var(--clr-text-secondary);
+  font-size: 1.125rem; padding: 2.5rem 0;
+  grid-column: 1 / -1;
+}
+
+.mensaje-error {
+  color: var(--clr-intense);
+  background-color: #fde8f4;
+  border: 1px solid var(--clr-intense);
+  padding: 0.75rem; border-radius: 0.5rem; margin-top: 1rem;
+}
+
+/* --- 8. Keyframes (Animaciones) --- */
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Animación de entrada para HomePage */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFadeIn 0.7s ease-out forwards;
+}
+
+.palabra-dia-section, .info-section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUpFadeIn 0.6s ease-out forwards;
+}
+
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

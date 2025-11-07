@@ -1,0 +1,165 @@
+/* --- 8. MODO OSCURO (Frío/Acuoso v11.1) --- */
+.dark:root {
+  /* Base Oscura (Gris Neutro Oscuro) */
+  --clr-bg: #2d2d2d;
+  --clr-text: #e0e1ec;
+  --clr-text-secondary: #a8b0b6;
+  --clr-card-bg: var(--clr-bg);
+  --clr-highlight: #3a3a3a; /* Luz oscura */
+  --clr-shadow: #1f1f1f;   /* Sombra oscura */
+  --clr-border-sutil: #4a4a4a;
+
+  /* Acentos Oscuros (Turquesa Primario) */
+  --clr-primary: #0fc0ac;      /* TURQUESA */
+  --clr-primary-darker: #0D9E90;
+  --clr-primary-shadow: rgba(15, 192, 172, 0.15);
+  --clr-secondary: #f3b124;    /* Amarillo */
+  --clr-secondary-text: #5c4505;
+  --clr-tertiary: #81B29A;      /* Verde Musgo Claro */
+  --clr-tertiary-darker: #6AA081;
+
+  /* Sombras Neomorfismo Oscuro (Neutro) */
+  --shadow-light: -4px -4px 8px var(--clr-highlight);
+  --shadow-dark: 4px 4px 8px var(--clr-shadow);
+  --shadow-inset-light: inset -2px -2px 5px var(--clr-highlight);
+  --shadow-inset-dark: inset 2px 2px 5px var(--clr-shadow);
+  /* Sombra Hover más pronunciada */
+  --shadow-hover-light: -6px -6px 12px var(--clr-highlight);
+  --shadow-hover-dark: 6px 6px 12px var(--clr-shadow);
+}
+
+/* Ajustes generales modo oscuro */
+.dark body { color: var(--clr-text); background-color: var(--clr-bg); }
+.dark .subtitulo,
+.dark .palabra-espanol,
+.dark .palabra-raiz,
+.dark .raiz-texto,
+.dark .ejemplo-texto,
+.dark .mensaje-no-resultados,
+.dark .morfema-significado,
+.dark .hero-description,
+.dark .info-section p {
+    color: var(--clr-text-secondary);
+}
+.dark .palabra-espanol { color: var(--clr-text); }
+.dark .raiz-texto { color: var(--clr-text); }
+.dark .hero-description strong { color: var(--clr-primary); }
+
+/* Elementos interactivos modo oscuro */
+.dark .barra-busqueda {
+    background-color: var(--clr-bg); border: none; color: var(--clr-text);
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+}
+.dark .barra-busqueda::placeholder { color: #777a88; }
+.dark .barra-busqueda:focus {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light),
+                0 0 0 3px var(--clr-primary-shadow); /* Resplandor Turquesa */
+}
+
+.dark .etiqueta {
+    background-color: var(--clr-bg);
+    color: var(--clr-secondary); /* Amarillo */
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .etiqueta[role="button"]:hover,
+.dark .etiqueta:not(span):hover {
+    color: var(--clr-primary); /* Turquesa */
+    box-shadow: var(--shadow-hover-dark), var(--shadow-hover-light);
+}
+.dark .etiqueta-activa {
+    box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light) !important;
+    color: var(--clr-primary) !important; /* Turquesa */
+}
+
+.dark .btn-principal {
+    background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker)); /* Gradiente Turquesa */
+    color: #1a1a1a; /* Texto casi negro */
+    box-shadow: 0 5px 15px var(--clr-primary-shadow);
+}
+.dark .btn-principal:hover {
+    box-shadow: 0 8px 20px var(--clr-primary-shadow);
+    filter: brightness(1.1); transform: translateY(-3px) scale(1.02);
+}
+.dark .btn-principal:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+}
+
+.dark .btn-secundario {
+    background: var(--clr-bg);
+    color: var(--clr-tertiary); /* Verde Musgo */
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .btn-secundario:hover {
+    color: var(--clr-tertiary);
+    box-shadow: var(--shadow-hover-dark), var(--shadow-hover-light);
+}
+.dark .btn-secundario:active { 
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light);
+ }
+
+/* Tarjetas Modo Oscuro */
+.dark .tarjeta-palabra, .dark .tarjeta-inicio {
+    background-color: var(--clr-card-bg); border: none;
+    box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .tarjeta-palabra:hover {
+    box-shadow: var(--shadow-hover-dark), var(--shadow-hover-light);
+}
+/* Palabra del Día Modo Oscuro */
+.dark .tarjeta-palabra-dia {
+    background: linear-gradient(145deg, var(--clr-primary), var(--clr-primary-darker)); /* Gradiente Turquesa */
+    color: #113a6f; /* Texto Azul muy oscuro */
+    box-shadow: 0 8px 20px var(--clr-primary-shadow);
+    border: none; border-image: none;
+}
+.dark .tarjeta-palabra-dia h3 { color: rgba(17, 58, 111, 0.85); }
+.dark .tarjeta-palabra-dia h2 { color: #113a6f; text-shadow: none; }
+.dark .tarjeta-palabra-dia p { color: #113a6f; }
+
+.dark .titulo-letra {
+    /* Gradiente Turquesa a Amarillo */
+    border-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary)) 1;
+}
+
+.dark .palabra-nahuatl { color: var(--clr-primary); } /* Turquesa */
+
+/* Analizador Modo Oscuro */
+.dark .analizador-resultados { box-shadow: var(--shadow-inset-dark), var(--shadow-inset-light); }
+.dark .titulo-seccion { border-bottom-color: var(--clr-border-sutil); }
+.dark .morfema-item { border-bottom-color: var(--clr-border-sutil); }
+.dark .morfema-forma { color: var(--clr-primary); } /* Turquesa */
+
+/* Mensajes de error y alertas */
+.dark .mensaje-error {
+  background-color: rgba(255,107,107,0.08);
+  color: var(--clr-intense);
+  border: 1px solid rgba(255,107,107,0.18);
+  box-shadow: none; padding: 0.6rem 0.9rem; border-radius: 8px;
+}
+
+/* Dropdown modo oscuro */
+.dark .category-select {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-secondary);
+  box-shadow: var(--shadow-dark), var(--shadow-light);
+}
+.dark .category-select:hover {
+  color: var(--clr-primary);
+  box-shadow: var(--shadow-hover-dark), var(--shadow-hover-light);
+}
+.dark .category-select:focus {
+  box-shadow: var(--shadow-dark), var(--shadow-light),
+              0 0 0 3px var(--clr-primary-shadow);
+}
+.dark .category-select option {
+    background-color: #3a3a3a;
+    color: var(--clr-text);
+}
+.dark .select-arrow { color: var(--clr-text-secondary); }
+
+/* Link sutil modo oscuro */
+.dark .link-sutil { color: var(--clr-tertiary); }
+.dark .link-sutil:hover { color: var(--clr-tertiary-darker); }
+.dark .link-sutil::after { background-color: var(--clr-tertiary); }
